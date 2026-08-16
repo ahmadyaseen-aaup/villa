@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="راجع تفاصيل الإقامة والضيوف والسعر المبدئي بوضوح قبل إرسال طلبك إلى المضيف.">
+  <title>مراجعة طلب الإقامة</title>
+  <link rel="icon" href="assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/villa-modern-640.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/marketplace-header.css">
+  <link rel="stylesheet" href="assets/css/marketplace-footer.css">
+  <link rel="stylesheet" href="assets/css/pages/booking-review.css">
+</head>
+<body class="booking-review-page">
+  <a class="skip-link" href="#main-content">انتقل إلى مراجعة الطلب</a>
+
+  <header class="site-header marketplace-header marketplace-header--sticky">
+    <div class="navbar page-shell">
+      <div class="marketplace-header__main">
+        <nav class="nav-links" id="main-navigation" data-nav-menu aria-label="التنقل الرئيسي">
+          <a class="nav-link" href="01-home-discovery.html">الرئيسية</a>
+          <a class="nav-link" href="01-home-discovery.html#stories">استكشف</a>
+          <a class="nav-link" href="01-home-discovery.html#seasonal-offers">عروض هذا الموسم</a>
+          <a class="nav-link" href="04-booking-request-review.html" aria-current="page">حجوزاتي</a>
+          <a class="nav-link marketplace-header__mobile-language" href="#"><i class="bi bi-globe2" aria-hidden="true"></i> العربية</a>
+        </nav>
+      </div>
+
+      <button class="menu-toggle marketplace-header__menu" type="button" data-menu-toggle data-menu-open-label="فتح القائمة" data-menu-close-label="إغلاق القائمة" aria-controls="main-navigation" aria-expanded="false" aria-label="فتح القائمة">
+        <span>القائمة</span>
+      </button>
+
+      <div class="nav-actions">
+        <button class="icon-action" type="button" aria-label="تغيير اللغة">
+          <i class="bi bi-globe2" aria-hidden="true"></i>
+          <span>العربية</span>
+        </button>
+        <button class="icon-action" type="button" data-dialog-open="sign-in-dialog" aria-label="المفضلة">
+          <i class="bi bi-heart" aria-hidden="true"></i>
+          <span>المفضلة</span>
+        </button>
+        <a class="icon-action" href="05-login.html" aria-label="تسجيل الدخول">
+          <i class="bi bi-person" aria-hidden="true"></i>
+          <span>تسجيل الدخول</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="booking-review-main">
+    <section class="booking-review-intro page-shell" aria-labelledby="review-title">
+      <a class="booking-review-back" href="03-villa-profile.html#booking-panel"><i class="bi bi-arrow-right" aria-hidden="true"></i> العودة إلى الإقامة</a>
+      <div class="booking-review-intro__copy">
+        <p class="booking-review-eyebrow">الخطوة الثانية · مراجعة الطلب</p>
+        <h1 id="review-title">كل تفاصيل إقامتك، في نظرة أخيرة</h1>
+        <p>راجع الرحلة وبيانات التواصل قبل إرسالها. لن يتم تحصيل أي مبلغ في هذه الخطوة.</p>
+      </div>
+
+      <ol class="booking-progress" aria-label="مراحل إتمام الحجز">
+        <li class="is-complete"><span><i class="bi bi-check-lg" aria-hidden="true"></i></span><strong>اختيار الإقامة</strong></li>
+        <li class="is-active" aria-current="step"><span>2</span><strong>مراجعة الطلب</strong></li>
+        <li><span>3</span><strong>رد المضيف</strong></li>
+        <li><span>4</span><strong>الدفع والتأكيد</strong></li>
+      </ol>
+    </section>
+
+    <form class="booking-review-layout page-shell" data-review-form>
+      <div class="booking-review-document">
+        <section class="booking-stay" aria-labelledby="property-summary-title">
+          <picture class="booking-stay__media">
+            <source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern-1280.webp 1280w" sizes="(max-width: 768px) 100vw, 320px" type="image/webp">
+            <img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="واجهة فيلا الوادي الخاصة ومسبحها" fetchpriority="high" decoding="async">
+          </picture>
+          <div class="booking-stay__content">
+            <span class="booking-status"><i class="bi bi-clock-history" aria-hidden="true"></i> طلب موافقة المضيف</span>
+            <h2 id="property-summary-title">فيلا الوادي الخاصة</h2>
+            <p class="booking-stay__location"><i class="bi bi-geo-alt" aria-hidden="true"></i> العقبة، حي الشاطئ <span aria-hidden="true">·</span> <span class="booking-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span></p>
+            <a class="booking-edit-link" href="03-villa-profile.html#booking-panel">تعديل الاختيار <i class="bi bi-arrow-left" aria-hidden="true"></i></a>
+          </div>
+        </section>
+
+        <section class="booking-review-section" aria-labelledby="trip-details-title">
+          <div class="booking-section-heading">
+            <div><p class="booking-section-kicker">تفاصيل الرحلة</p><h2 id="trip-details-title">الإقامة والضيوف</h2></div>
+            <a href="03-villa-profile.html#booking-panel">تعديل</a>
+          </div>
+
+          <div class="booking-trip-facts">
+            <div class="booking-trip-fact"><span class="booking-trip-fact__icon"><i class="bi bi-moon-stars" aria-hidden="true"></i></span><div><small>الفترة</small><strong data-review-period>إقامة ليلية</strong></div></div>
+            <div class="booking-trip-fact"><span class="booking-trip-fact__icon"><i class="bi bi-calendar3" aria-hidden="true"></i></span><div><small>التاريخ</small><strong data-review-dates>يُراجع مع المضيف</strong></div></div>
+          </div>
+
+          <div class="booking-guests" aria-label="تفاصيل الضيوف">
+            <div><span data-review-adults>2</span><strong>بالغون</strong><small>ضمن سعة الإقامة</small></div>
+            <div><span data-review-children>0</span><strong>أطفال</strong><small>فئة مستقلة</small></div>
+            <div><span data-review-infants>0</span><strong>رُضّع</strong><small>فئة مستقلة</small></div>
+          </div>
+        </section>
+
+        <section class="booking-review-section" aria-labelledby="contact-title">
+          <div class="booking-section-heading">
+            <div><p class="booking-section-kicker">للتواصل حول الطلب</p><h2 id="contact-title">بياناتك الأساسية</h2></div>
+          </div>
+          <div class="booking-contact-grid">
+            <label class="field-group"><span class="field-label">الاسم الكامل</span><input class="field" name="fullName" autocomplete="name" required aria-describedby="full-name-hint"><small id="full-name-hint">كما يظهر في وثيقة الهوية</small></label>
+            <label class="field-group"><span class="field-label">رقم الهاتف</span><input class="field" type="tel" name="phone" autocomplete="tel" inputmode="tel" required aria-describedby="phone-hint"><small id="phone-hint">مع مفتاح الدولة</small></label>
+            <label class="field-group field-group--wide"><span class="field-label">البريد الإلكتروني</span><input class="field" type="email" name="email" autocomplete="email" required aria-describedby="email-hint"><small id="email-hint">سنستخدمه لتحديثات هذا الطلب</small></label>
+            <label class="field-group field-group--wide"><span class="field-label">رسالة اختيارية للمضيف</span><textarea class="field" name="message" maxlength="600" placeholder="مثلاً: وقت الوصول المتوقع أو طلب يحتاج إلى توضيح" aria-describedby="message-hint"></textarea><small id="message-hint">لا تكتب بيانات دفع أو معلومات حساسة هنا.</small></label>
+          </div>
+        </section>
+
+        <section class="booking-review-section booking-next" aria-labelledby="next-title">
+          <div class="booking-section-heading">
+            <div><p class="booking-section-kicker">بعد إرسال الطلب</p><h2 id="next-title">ماذا سيحدث؟</h2></div>
+          </div>
+          <ol class="booking-next__steps">
+            <li><span>1</span><div><strong>يتحقق النظام من التفاصيل</strong><p>تُراجع السعة والتوفر والسعر والسياسات قبل إنشاء الطلب الفعلي.</p></div></li>
+            <li><span>2</span><div><strong>يرد المضيف على الطلب نفسه</strong><p>يمكنه الموافقة أو الرفض فقط، وتظهر مهلة الرد وفق إعدادات الإقامة.</p></div></li>
+            <li><span>3</span><div><strong>تدفع بعد الموافقة</strong><p>إذا تمت الموافقة، تظهر نافذة الدفع المحددة للإقامة قبل تأكيد الحجز.</p></div></li>
+          </ol>
+        </section>
+      </div>
+
+      <aside class="booking-price-panel" aria-labelledby="price-title">
+        <div class="booking-price-panel__heading">
+          <p>ملخص واضح قبل الإرسال</p>
+          <h2 id="price-title">السعر المبدئي</h2>
+        </div>
+        <div class="booking-price-lines">
+          <div><span>الإقامة <small data-review-period>إقامة ليلية</small></span><strong data-review-price>1,280 ر.س.</strong></div>
+          <div><span>الإضافات</span><strong>لا توجد</strong></div>
+          <div><span>الضرائب المطبقة</span><strong>بعد التحقق</strong></div>
+          <div class="booking-price-total"><span>التقدير الحالي</span><strong data-review-price>1,280 ر.س.</strong></div>
+        </div>
+
+        <div class="booking-no-fee"><i class="bi bi-check2-circle" aria-hidden="true"></i><span>لا تُضاف رسوم خدمة على العميل.</span></div>
+        <p class="booking-price-guidance"><i class="bi bi-info-circle" aria-hidden="true"></i><span>يصبح السعر نهائياً بعد التحقق من التوفر والتسعير والضرائب والعملة والسياسات.</span></p>
+
+        <label class="booking-terms"><input type="checkbox" data-terms aria-describedby="terms-error"><span>راجعت تفاصيل الطلب وأوافق على <a href="#">شروط الاستخدام</a> و<a href="#">سياسة الإلغاء الخاصة بالإقامة</a>.</span></label>
+        <p class="booking-field-error" id="terms-error" data-terms-error role="alert" hidden>وافق على الشروط للمتابعة.</p>
+
+        <button class="button button--primary booking-submit" type="submit" data-submit-request>
+          <span data-submit-label>إرسال طلب الإقامة</span>
+          <i class="bi bi-arrow-left" aria-hidden="true"></i>
+        </button>
+        <p class="booking-submit-note"><i class="bi bi-credit-card" aria-hidden="true"></i> لن يتم الدفع الآن</p>
+        <p class="visually-hidden" data-form-status aria-live="polite"></p>
+      </aside>
+    </form>
+  </main>
+
+  <footer class="site-footer marketplace-footer">
+    <div class="footer-grid page-shell">
+      <div class="footer-intro">
+        <a class="marketplace-footer__brand" href="01-home-discovery.html"><span><i class="bi bi-compass" aria-hidden="true"></i></span><strong>بوابتك لإقامة أجمل</strong></a>
+        <p>اكتشف أماكن مختارة بعناية، وقارن الخيارات بوضوح قبل أن تبدأ طلب الحجز.</p>
+        <div class="footer-social-links" aria-label="شبكات التواصل الاجتماعي"><a href="#" aria-label="إنستغرام"><i class="bi bi-instagram" aria-hidden="true"></i></a><a href="#" aria-label="فيسبوك"><i class="bi bi-facebook" aria-hidden="true"></i></a><a href="#" aria-label="يوتيوب"><i class="bi bi-youtube" aria-hidden="true"></i></a></div>
+      </div>
+      <nav class="footer-column" aria-label="روابط سريعة"><h2>روابط سريعة</h2><a href="01-home-discovery.html">الرئيسية</a><a href="02-search-map-results.html">استكشف الإقامات</a><a href="01-home-discovery.html#seasonal-offers">العروض</a></nav>
+      <nav class="footer-column" aria-label="المساعدة والسياسات"><h2>المساعدة</h2><a href="#">مركز المساعدة</a><a href="#">سياسة الإلغاء</a><a href="#">إمكانية الوصول</a></nav>
+      <div class="footer-column marketplace-footer__contact"><h2>تواصل معنا</h2><a href="mailto:support@example.com"><i class="bi bi-envelope" aria-hidden="true"></i><span dir="ltr">support@example.com</span></a><p><i class="bi bi-clock" aria-hidden="true"></i><span>الدعم متاح يومياً</span></p></div>
+    </div>
+    <div class="footer-bottom page-shell"><p>© <span data-current-year></span> نموذج واجهة الإقامات</p><p>العربية · ر.س.</p></div>
+  </footer>
+
+  <dialog class="modal booking-success-dialog" id="request-success-dialog" aria-labelledby="success-title">
+    <div class="modal__content">
+      <span class="booking-success-icon"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+      <div class="modal__header"><div><p class="booking-section-kicker">معاينة ناجحة</p><h2 id="success-title">تمت محاكاة إرسال الطلب</h2></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+      <p class="booking-success-dialog__copy">هذه واجهة تجريبية فقط؛ لم تُرسل بيانات، ولم يُحجز المخزون، ولم يُحصّل أي مبلغ. في المنتج المتصل ستظهر حالة الطلب ومهلة رد المضيف هنا.</p>
+      <div class="modal__actions"><button class="button button--quiet" type="button" data-dialog-close>العودة للمراجعة</button><a class="button button--primary" href="01-home-discovery.html">العودة للرئيسية</a></div>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="sign-in-dialog" aria-labelledby="sign-in-title">
+    <div class="modal__content">
+      <div class="modal__header"><div><h2 id="sign-in-title">احفظ اختياراتك</h2><p class="muted">سجّل الدخول لمزامنة المفضلة وإكمال الطلب لاحقاً.</p></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+      <div class="modal__actions"><button class="button button--quiet" type="button" data-dialog-close>ليس الآن</button><a class="button button--primary" href="05-login.html">تسجيل الدخول</a></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="assets/js/pages/booking-review.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+:root {
+  color-scheme: light;
+  --mobile-ink-950: #073d49;
+  --mobile-ink-900: #0b4650;
+  --mobile-ink-700: #41666c;
+  --mobile-ink-500: #718488;
+  --mobile-accent: #ff5b43;
+  --mobile-accent-dark: #e94c36;
+  --mobile-aqua-100: #e7f4f2;
+  --mobile-aqua-200: #cde8e4;
+  --mobile-canvas: #fdfcf9;
+  --mobile-surface: #ffffff;
+  --mobile-surface-muted: #f5f7f5;
+  --mobile-line: #e5e9e7;
+  --mobile-star: #f6a51c;
+  --mobile-success: #1f8b73;
+  --mobile-danger: #bd3f34;
+  --mobile-radius-sm: .75rem;
+  --mobile-radius-md: 1rem;
+  --mobile-radius-lg: 1.4rem;
+  --mobile-radius-xl: 1.8rem;
+  --mobile-shadow-sm: 0 .3rem 1rem rgba(7, 61, 73, .07);
+  --mobile-shadow-md: 0 .8rem 2rem rgba(7, 61, 73, .11);
+  --mobile-page-width: 30rem;
+  --mobile-gutter: 1rem;
+  --mobile-bottom-nav-height: 4.5rem;
+  --mobile-transition: 180ms ease;
+}
