@@ -1,0 +1,188 @@
+.marketplace-header {
+  min-height: 3.85rem;
+  border-block-end-color: #eceeeb;
+  background: rgba(255, 255, 255, .98);
+  backdrop-filter: none;
+}
+
+.marketplace-header--sticky {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: 110;
+}
+
+.marketplace-header .page-shell {
+  width: min(calc(100% - (2 * clamp(1rem, 3.45vw, 3.25rem))), 112rem);
+}
+
+.marketplace-header .navbar {
+  display: flex;
+  min-height: 3.85rem;
+  align-items: stretch;
+}
+
+.marketplace-header__main {
+  position: relative;
+  display: grid;
+  min-width: 0;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+.marketplace-header .nav-links {
+  justify-self: start;
+  gap: clamp(1.5rem, 3vw, 3.25rem);
+}
+
+.marketplace-header .nav-link {
+  padding-block-start: .2rem;
+  color: #536164;
+  font-size: .95rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.marketplace-header .nav-link::after {
+  inset-block-end: .3rem;
+  height: .22rem;
+  background: #f45f49;
+}
+
+.marketplace-header__mobile-language {
+  display: none;
+}
+
+.marketplace-header .nav-actions {
+  margin-inline-start: auto;
+  gap: 1rem;
+}
+
+.marketplace-header .icon-action,
+.marketplace-header__menu {
+  border-radius: .65rem;
+  color: #354f54;
+  font-size: .9rem;
+  font-weight: 700;
+}
+
+.marketplace-header .icon-action:hover,
+.marketplace-header__menu:hover {
+  background: #f3f6f4;
+}
+
+.marketplace-header__menu {
+  display: none;
+  align-self: center;
+  margin-inline: 1.35rem;
+}
+
+@media (max-width: 74.99rem) {
+  .marketplace-header .nav-links {
+    gap: 1.5rem;
+  }
+
+  .marketplace-header .icon-action span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 61.99rem) {
+  .marketplace-header .nav-link {
+    font-size: .85rem;
+  }
+
+  .marketplace-header .nav-actions {
+    gap: .15rem;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .marketplace-header,
+  .marketplace-header .navbar {
+    min-height: 4.125rem;
+  }
+
+  .marketplace-header .page-shell {
+    width: calc(100% - 1.75rem);
+  }
+
+  .marketplace-header__main {
+    display: contents;
+  }
+
+  .marketplace-header .navbar {
+    justify-content: space-between;
+  }
+
+  .marketplace-header .nav-links {
+    position: absolute;
+    inset-block-start: calc(100% - .2rem);
+    inset-inline: 0;
+    z-index: 60;
+    display: none;
+    padding: .7rem;
+    border: 1px solid #e2e6e4;
+    border-radius: .85rem;
+    background: white;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .marketplace-header .nav-links.is-open {
+    display: grid;
+  }
+
+  .marketplace-header .nav-link {
+    min-height: 2.9rem;
+    justify-content: flex-start;
+    padding-inline: .8rem;
+    border-radius: .55rem;
+  }
+
+  .marketplace-header .nav-link::after {
+    display: none;
+  }
+
+  .marketplace-header .nav-link:hover,
+  .marketplace-header .nav-link[aria-current="page"] {
+    background: #f3f6f4;
+  }
+
+  .marketplace-header__menu {
+    display: inline-flex;
+    width: auto;
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    order: 1;
+    margin: 0;
+    padding: .45rem .65rem;
+    font-size: .78rem;
+    font-weight: 800;
+  }
+
+  .marketplace-header .nav-actions {
+    order: 2;
+  }
+
+  .marketplace-header .icon-action {
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: .45rem;
+  }
+
+  .marketplace-header__mobile-language,
+  .marketplace-header .marketplace-header__mobile-language {
+    display: inline-flex;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marketplace-header .nav-link::after {
+    transition: none;
+  }
+}

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="سجّل الدخول لحفظ الإقامات ومتابعة الحجوزات والوصول إلى اختياراتك من أي جهاز.">
+  <title>تسجيل الدخول | بوابتك لإقامة أجمل</title>
+  <link rel="icon" href="assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/villa-modern-1280.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/login.css">
+</head>
+<body class="login-page">
+  <a class="skip-link" href="#main-content">انتقل إلى نموذج تسجيل الدخول</a>
+
+  <main class="login-layout">
+    <section class="login-visual" aria-labelledby="login-visual-title">
+      <picture class="login-visual__media">
+        <source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern-1280.webp 1280w, assets/images/villa-modern.webp 1536w" sizes="(max-width: 760px) 100vw, 56vw" type="image/webp">
+        <img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="فيلا عصرية مطلة على البحر عند الغروب" decoding="async" fetchpriority="high">
+      </picture>
+      <div class="login-visual__shade" aria-hidden="true"></div>
+
+      <div class="login-visual__content">
+        <a class="login-brand" href="01-home-discovery.html" aria-label="العودة إلى الصفحة الرئيسية">
+          <span><i class="bi bi-compass" aria-hidden="true"></i></span>
+          <strong>بوابتك لإقامة أجمل</strong>
+        </a>
+
+        <div class="login-visual__copy">
+          <p class="login-eyebrow"><i class="bi bi-stars" aria-hidden="true"></i> عُد إلى رحلتك</p>
+          <h1 id="login-visual-title">اختياراتك الجميلة، في انتظارك.</h1>
+          <p>احفظ الإقامات التي أحببتها، وارجع إلى تفاصيل رحلتك من أي جهاز.</p>
+        </div>
+
+        <p class="login-visual__location"><i class="bi bi-geo-alt" aria-hidden="true"></i> العقبة، الأردن</p>
+      </div>
+    </section>
+
+    <section class="login-panel" aria-labelledby="login-title">
+      <header class="login-panel__header">
+        <a class="login-back" href="01-home-discovery.html"><i class="bi bi-arrow-right" aria-hidden="true"></i> العودة</a>
+        <button class="login-language" type="button" data-language-button><i class="bi bi-globe2" aria-hidden="true"></i> العربية</button>
+      </header>
+
+      <div class="login-content" id="main-content">
+        <div class="login-heading">
+          <p>مرحباً بعودتك</p>
+          <h2 id="login-title">تسجيل الدخول</h2>
+          <span>استخدم حسابك للمتابعة من حيث توقفت.</span>
+        </div>
+
+        <div class="login-social" aria-label="خيارات تسجيل الدخول الخارجية">
+          <button class="login-provider" type="button" data-provider="Google">
+            <i class="bi bi-google" aria-hidden="true"></i>
+            <span>المتابعة عبر Google</span>
+          </button>
+          <button class="login-provider login-provider--apple" type="button" data-provider="Apple">
+            <i class="bi bi-apple" aria-hidden="true"></i>
+            <span>المتابعة عبر Apple</span>
+          </button>
+        </div>
+
+        <div class="login-divider"><span>أو باستخدام حسابك</span></div>
+
+        <form class="login-form" data-login-form novalidate>
+          <div class="login-field">
+            <label for="login-username">اسم المستخدم</label>
+            <div class="login-input">
+              <i class="bi bi-person" aria-hidden="true"></i>
+              <input id="login-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" minlength="3" required placeholder="أدخل اسم المستخدم">
+            </div>
+            <small class="login-field__error" data-error-for="login-username" aria-live="polite"></small>
+          </div>
+
+          <div class="login-field">
+            <div class="login-field__label-row">
+              <label for="login-password">كلمة المرور</label>
+              <a href="#" data-forgot-password>نسيت كلمة المرور؟</a>
+            </div>
+            <div class="login-input">
+              <i class="bi bi-lock" aria-hidden="true"></i>
+              <input id="login-password" name="password" type="password" autocomplete="current-password" minlength="8" required placeholder="أدخل كلمة المرور">
+              <button class="login-password-toggle" type="button" data-password-toggle aria-controls="login-password" aria-label="إظهار كلمة المرور" aria-pressed="false">
+                <i class="bi bi-eye" aria-hidden="true"></i>
+              </button>
+            </div>
+            <small class="login-field__error" data-error-for="login-password" aria-live="polite"></small>
+          </div>
+
+          <button class="button button--primary login-submit" type="submit" data-login-submit>
+            <span>تسجيل الدخول</span>
+            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+          </button>
+
+          <p class="login-form__status" data-login-status role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="login-register">ليس لديك حساب؟ <a href="#" data-create-account>إنشاء حساب جديد</a></p>
+        <p class="login-security"><i class="bi bi-shield-check" aria-hidden="true"></i> لن نطلب منك بيانات الدفع عند تسجيل الدخول.</p>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="assets/js/pages/login.js"></script>
+</body>
+</html>

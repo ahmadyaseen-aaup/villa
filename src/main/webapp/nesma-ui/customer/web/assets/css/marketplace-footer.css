@@ -1,0 +1,98 @@
+.marketplace-footer {
+  margin-block-start: .5rem;
+  padding-block-start: 3.75rem;
+  background: #082f39;
+}
+
+.marketplace-footer .footer-grid {
+  grid-template-columns: 1.55fr repeat(3, minmax(9rem, 1fr));
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-block-end: 3rem;
+}
+
+.marketplace-footer__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.marketplace-footer__brand > span {
+  display: grid;
+  width: 2.85rem;
+  height: 2.85rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: .8rem;
+  background: rgba(255, 255, 255, .07);
+  color: #6cc6c4;
+  font-size: 1.25rem;
+}
+
+.footer-social-links {
+  display: flex;
+  gap: .55rem;
+}
+
+.footer-social-links a {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: .65rem;
+  background: rgba(255, 255, 255, .05);
+  color: white;
+  transition: border-color var(--transition-fast), background var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer-social-links a:hover {
+  border-color: #6cc6c4;
+  background: rgba(108, 198, 196, .14);
+  transform: translateY(-.12rem);
+}
+
+.marketplace-footer__contact > a,
+.marketplace-footer__contact > p {
+  display: flex;
+  align-items: flex-start;
+  gap: .55rem;
+}
+
+.marketplace-footer__contact i {
+  margin-block-start: .2rem;
+  color: #6cc6c4;
+}
+
+@media (max-width: 74.99rem) {
+  .marketplace-footer .footer-grid {
+    grid-template-columns: 1.4fr repeat(2, minmax(0, 1fr));
+  }
+
+  .marketplace-footer__contact {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (max-width: 47.99rem) {
+  .marketplace-footer {
+    padding-block-start: 2.8rem;
+  }
+
+  .marketplace-footer .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.25rem 1.5rem;
+  }
+
+  .marketplace-footer .footer-intro,
+  .marketplace-footer__contact {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footer-social-links a {
+    transition: none;
+  }
+}

@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="تفاصيل فيلا أماليا في عمّان، مرافقها وموقعها وخيارات طلب الإقامة.">
+  <title>فيلا أماليا</title>
+  <link rel="icon" href="../web/assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="../web/assets/images/hero-villa-640.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../web/assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/pages/profile.css">
+</head>
+<body>
+  <div class="mobile-app mobile-profile-page">
+    <a class="mobile-skip-link" href="#profile-content">انتقل إلى تفاصيل الإقامة</a>
+
+    <header class="mobile-profile-sticky" data-profile-sticky aria-hidden="true" inert>
+      <a class="mobile-profile-sticky__back" href="02-search-map-results.html" aria-label="العودة إلى النتائج"><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+      <div><strong>فيلا أماليا</strong><small>عمّان، الأردن</small></div>
+      <div class="mobile-profile-sticky__actions">
+        <button type="button" data-favorite aria-label="حفظ فيلا أماليا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+        <button type="button" data-share aria-label="مشاركة فيلا أماليا"><i class="bi bi-share" aria-hidden="true"></i></button>
+      </div>
+    </header>
+
+    <main id="profile-content">
+      <section class="mobile-profile-gallery" data-profile-hero aria-label="صور فيلا أماليا">
+        <picture data-gallery-hero-picture>
+          <source data-gallery-hero-source srcset="../web/assets/images/hero-villa-640.webp 640w, ../web/assets/images/hero-villa-1280.webp 1280w" sizes="(max-width: 480px) 100vw, 480px" type="image/webp">
+          <img data-gallery-hero-image src="../web/assets/images/hero-villa.jpg" srcset="../web/assets/images/hero-villa-640.webp 640w, ../web/assets/images/hero-villa-1280.webp 1280w" sizes="(max-width: 480px) 100vw, 480px" width="1536" height="1024" alt="فيلا أماليا ومسبحها المطل على الطبيعة" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="mobile-profile-gallery__actions">
+          <a class="mobile-icon-button" href="02-search-map-results.html" aria-label="العودة إلى النتائج"><i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+          <div>
+            <button class="mobile-icon-button" type="button" data-favorite aria-label="حفظ فيلا أماليا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <button class="mobile-icon-button" type="button" data-share aria-label="مشاركة فيلا أماليا"><i class="bi bi-share" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <button class="mobile-profile-gallery__open" type="button" data-dialog-open="gallery-viewer" data-gallery-hero-surface aria-label="عرض الواجهة والمسبح، الصورة 1 من 4، في معرض الإقامة">
+          <span class="mobile-profile-gallery__counter" data-gallery-hero-position dir="ltr">1 / 4</span>
+          <span class="mobile-profile-gallery__dots" aria-hidden="true">
+            <i class="bi bi-circle-fill"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i><i class="bi bi-circle"></i>
+          </span>
+          <span class="mobile-profile-gallery__label"><i class="bi bi-grid-3x3-gap" aria-hidden="true"></i> عرض الصور</span>
+        </button>
+        <p class="visually-hidden" data-gallery-hero-status role="status" aria-live="polite"></p>
+      </section>
+
+      <div class="mobile-profile-body mobile-shell">
+        <header class="mobile-profile-heading profile-reveal">
+          <div class="mobile-profile-heading__eyebrow"><span><i class="bi bi-patch-check-fill" aria-hidden="true"></i> إقامة موثّقة</span><span class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8 <a href="#reviews-title">98 تقييماً</a></span></div>
+          <h1>فيلا أماليا</h1>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i> جبل عمّان، عمّان، الأردن</p>
+        </header>
+
+        <section class="mobile-profile-facts profile-reveal" aria-label="معلومات الإقامة">
+          <div><i class="bi bi-people" aria-hidden="true"></i><span><strong>حتى 6</strong><small>ضيوف</small></span></div>
+          <div><i class="bi bi-door-open" aria-hidden="true"></i><span><strong>3</strong><small>غرف نوم</small></span></div>
+          <div><i class="bi bi-lamp" aria-hidden="true"></i><span><strong>5</strong><small>أسرّة</small></span></div>
+          <div><i class="bi bi-droplet" aria-hidden="true"></i><span><strong>4</strong><small>حمّامات</small></span></div>
+        </section>
+
+        <section class="mobile-profile-section mobile-profile-host profile-reveal" aria-labelledby="host-title">
+          <span class="mobile-profile-host__avatar" aria-hidden="true"><i class="bi bi-person-check"></i></span>
+          <div><p class="mobile-profile-eyebrow">المضيف</p><h2 id="host-title">إقامة يديرها سامر</h2><p>مضيف موثّق، وتظهر مهلة الرد عند إرسال الطلب.</p></div>
+          <i class="bi bi-patch-check-fill mobile-profile-host__verified" aria-label="مضيف موثّق"></i>
+        </section>
+
+        <section class="mobile-profile-section profile-reveal" aria-labelledby="about-title">
+          <p class="mobile-profile-eyebrow">إقامة مصممة للخصوصية</p>
+          <h2 id="about-title">مساحة هادئة قريبة من قلب عمّان</h2>
+          <div class="mobile-profile-copy">
+            <p>تجمع فيلا أماليا بين تصميم عصري ومساحات مفتوحة تتصل بالمسبح والجلسات الخارجية، لتمنح العائلة أو المجموعة إقامة خاصة ومريحة.</p>
+            <p data-about-more hidden>تتوزع غرف النوم على جناحين مستقلين، بينما يرتبط المطبخ ومنطقة المعيشة بالتراس مباشرةً. سعر الإقامة ثابت حتى السعة القصوى ولا يُضرب بعدد الضيوف.</p>
+          </div>
+          <button class="mobile-profile-more" type="button" data-toggle-about aria-expanded="false">عرض المزيد <i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+          <div class="mobile-profile-highlights">
+            <div><i class="bi bi-stars" aria-hidden="true"></i><span><strong>خصوصية كاملة</strong><small>المسبح والمساحات الخارجية خاصة</small></span></div>
+            <div><i class="bi bi-geo-alt" aria-hidden="true"></i><span><strong>موقع قريب</strong><small>دقائق من المطاعم والمعالم</small></span></div>
+            <div><i class="bi bi-house-check" aria-hidden="true"></i><span><strong>وصول مريح</strong><small>موقفان داخل حدود الإقامة</small></span></div>
+          </div>
+        </section>
+
+        <section class="mobile-profile-section profile-reveal" aria-labelledby="amenities-title">
+          <div class="mobile-profile-section__heading"><div><p class="mobile-profile-eyebrow">مرافق الإقامة</p><h2 id="amenities-title">كل ما تحتاجه لرحلة مريحة</h2></div><button type="button" data-dialog-open="amenities-sheet">عرض الكل</button></div>
+          <div class="mobile-profile-amenities" aria-label="أبرز وسائل الراحة">
+            <div><i class="bi bi-water" aria-hidden="true"></i><span>مسبح خاص</span></div>
+            <div><i class="bi bi-sun" aria-hidden="true"></i><span>جلسات خارجية</span></div>
+            <div><i class="bi bi-wifi" aria-hidden="true"></i><span>واي فاي</span></div>
+            <div><i class="bi bi-snow" aria-hidden="true"></i><span>تكييف مركزي</span></div>
+            <div><i class="bi bi-cup-hot" aria-hidden="true"></i><span>مطبخ مجهز</span></div>
+            <div><i class="bi bi-fire" aria-hidden="true"></i><span>منطقة شواء</span></div>
+            <div><i class="bi bi-car-front" aria-hidden="true"></i><span>موقف خاص</span></div>
+          </div>
+          <details class="mobile-profile-services">
+            <summary><span><strong>المرافق والخدمات</strong><small>تنظيف قبل الوصول، صيانة ودعم أثناء الإقامة</small></span><i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+            <ul><li>تنظيف وتجهيز كامل قبل الوصول</li><li>دعم وصيانة أثناء الإقامة</li><li>استقبال شخصي عند الحاجة</li></ul>
+          </details>
+        </section>
+
+        <section class="mobile-profile-section profile-reveal" aria-labelledby="location-title">
+          <div class="mobile-profile-section__heading"><div><p class="mobile-profile-eyebrow">الموقع الدقيق</p><h2 id="location-title">جبل عمّان، عمّان</h2></div><a href="02-search-map-results.html">العودة للخريطة</a></div>
+          <p class="mobile-profile-section__support">الموقع ظاهر للعامة. تبقى رموز الدخول وتعليمات الوصول الخاصة محجوبة حتى استيفاء شروط الحجز والدفع.</p>
+          <div class="mobile-profile-map" data-profile-map>
+            <img class="mobile-profile-map__fallback" src="../web/assets/images/map-background.webp" width="1024" height="1536" alt="خريطة موقع فيلا أماليا في جبل عمّان" loading="lazy" decoding="async" data-map-fallback>
+            <div class="mobile-profile-map__canvas" id="interactive-profile-map" role="region" aria-label="خريطة تفاعلية لموقع فيلا أماليا" data-live-map></div>
+            <div class="mobile-profile-map__label"><span><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><strong>فيلا أماليا</strong></span><small>جبل عمّان، عمّان، الأردن</small></div>
+          </div>
+          <p class="visually-hidden" data-map-status role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="mobile-profile-section profile-reveal" aria-labelledby="periods-title">
+          <div class="mobile-profile-section__heading"><div><p class="mobile-profile-eyebrow">مرونة تناسب رحلتك</p><h2 id="periods-title">فترات الإقامة التي يوفرها العقار</h2></div></div>
+          <p class="mobile-profile-section__support">اختر الفترة أولاً، ثم حدّد التاريخ المناسب داخل طلب الإقامة.</p>
+          <div class="mobile-profile-periods" data-profile-periods>
+            <button class="is-selected" type="button" data-period="overnight" data-period-label="إقامة ليلية" data-period-price="480" data-period-unit="ليلة" aria-pressed="true"><i class="bi bi-moon-stars" aria-hidden="true"></i><span><strong>إقامة ليلية</strong><small>3:00 م — 11:00 ص</small></span><em>480 د.أ</em></button>
+            <button type="button" data-period="full-day" data-period-label="يوم كامل" data-period-price="360" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sun" aria-hidden="true"></i><span><strong>يوم كامل</strong><small>10:00 ص — 10:00 م</small></span><em>360 د.أ</em></button>
+            <button type="button" data-period="morning" data-period-label="فترة صباحية" data-period-price="280" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sunrise" aria-hidden="true"></i><span><strong>فترة صباحية</strong><small>8:00 ص — 2:00 م</small></span><em>280 د.أ</em></button>
+            <button type="button" data-period="evening" data-period-label="فترة مسائية" data-period-price="300" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sunset" aria-hidden="true"></i><span><strong>فترة مسائية</strong><small>4:00 م — 11:00 م</small></span><em>300 د.أ</em></button>
+          </div>
+        </section>
+
+        <section class="mobile-profile-section mobile-profile-review profile-reveal" aria-labelledby="reviews-title">
+          <div class="mobile-profile-section__heading"><div><p class="mobile-profile-eyebrow">تجارب مكتملة</p><h2 id="reviews-title"><span class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span> · 98 تقييماً</h2></div><button type="button" data-dialog-open="reviews-sheet">عرض الكل</button></div>
+          <div class="mobile-profile-review__scores" aria-label="تفاصيل التقييم">
+            <div><span>النظافة</span><span class="mobile-profile-review__meter"><i class="is-98"></i></span><strong>4.9</strong></div>
+            <div><span>دقة الوصف</span><span class="mobile-profile-review__meter"><i class="is-96"></i></span><strong>4.8</strong></div>
+            <div><span>الموقع</span><span class="mobile-profile-review__meter"><i class="is-98"></i></span><strong>4.9</strong></div>
+          </div>
+          <article class="mobile-profile-review__card">
+            <div class="mobile-profile-review__heading"><span class="mobile-profile-review__avatar"><img src="../web/assets/images/villa-summer-640.webp" width="96" height="96" alt=""><i class="bi bi-check" aria-hidden="true"></i></span><div><strong>سارة العتيبي</strong><small>يوليو 2026 · إقامة موثّقة</small></div></div>
+            <blockquote>فيلا رائعة بكل معنى الكلمة، نظيفة وهادئة، والمساحات مناسبة جداً للعائلة. كانت التفاصيل واضحة منذ بداية الطلب.</blockquote>
+          </article>
+        </section>
+      </div>
+    </main>
+
+    <div class="mobile-profile-booking-bar" aria-label="بدء طلب الإقامة">
+      <div class="mobile-profile-booking-bar__price"><button type="button" data-dialog-open="price-info-dialog" aria-label="معلومات عن السعر"><i class="bi bi-info-circle" aria-hidden="true"></i></button><span><small>ابتداءً من</small><strong><span data-profile-price>480</span> د.أ</strong><em>/ <span data-profile-unit>ليلة</span></em></span></div>
+      <button class="mobile-button mobile-button--primary" type="button" data-dialog-open="booking-sheet">اطلب الإقامة</button>
+    </div>
+  </div>
+
+  <dialog class="mobile-dialog mobile-gallery-viewer" id="gallery-viewer" aria-labelledby="gallery-title">
+    <div class="mobile-gallery-viewer__header"><div><p><span data-gallery-position dir="ltr">1 / 4</span></p><h2 id="gallery-title" data-gallery-title>الواجهة والمسبح</h2></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق معرض الصور"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+    <div class="mobile-gallery-viewer__stage" data-gallery-stage>
+      <button class="mobile-gallery-viewer__arrow mobile-gallery-viewer__arrow--previous" type="button" data-gallery-previous aria-label="الصورة السابقة"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+      <figure><img data-gallery-image src="../web/assets/images/hero-villa-1280.webp" srcset="../web/assets/images/hero-villa-640.webp 640w, ../web/assets/images/hero-villa-1280.webp 1280w" sizes="100vw" width="1280" height="683" alt="فيلا أماليا ومسبحها المطل على الطبيعة"><figcaption class="visually-hidden" data-gallery-caption>الواجهة والمسبح</figcaption></figure>
+      <button class="mobile-gallery-viewer__arrow mobile-gallery-viewer__arrow--next" type="button" data-gallery-next aria-label="الصورة التالية"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+    </div>
+    <div class="mobile-gallery-viewer__thumbs" aria-label="اختيار صورة من المعرض">
+      <button type="button" data-gallery-select="0" aria-label="عرض صورة الواجهة والمسبح" aria-pressed="true"><img src="../web/assets/images/hero-villa-640.webp" width="640" height="342" alt=""></button>
+      <button type="button" data-gallery-select="1" aria-label="عرض صورة الجلسة الخارجية" aria-pressed="false"><img src="../web/assets/images/villa-olive-640.webp" width="640" height="427" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-select="2" aria-label="عرض صورة المساحات الداخلية" aria-pressed="false"><img src="../web/assets/images/villa-stone-640.webp" width="640" height="427" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-select="3" aria-label="عرض صورة الإطلالة وقت الغروب" aria-pressed="false"><img src="../web/assets/images/villa-summer-640.webp" width="640" height="427" alt="" loading="lazy"></button>
+    </div>
+    <p class="visually-hidden" data-gallery-status role="status" aria-live="polite"></p>
+  </dialog>
+
+  <dialog class="mobile-sheet mobile-booking-sheet" id="booking-sheet" aria-labelledby="booking-title" aria-describedby="booking-description">
+    <div class="mobile-sheet__handle" aria-hidden="true"></div>
+    <div class="mobile-sheet__header"><div><h2 id="booking-title">اختر تفاصيل طلبك</h2><p id="booking-description">لن يتم الدفع أو حجز المخزون في هذه الخطوة.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+    <form data-profile-booking-form>
+      <div class="mobile-sheet__body">
+        <fieldset class="mobile-booking-sheet__periods"><legend>فترة الإقامة</legend><div data-sheet-periods>
+          <button class="is-selected" type="button" data-period="overnight" data-period-label="إقامة ليلية" data-period-price="480" data-period-unit="ليلة" aria-pressed="true"><i class="bi bi-moon-stars" aria-hidden="true"></i> إقامة ليلية</button>
+          <button type="button" data-period="full-day" data-period-label="يوم كامل" data-period-price="360" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sun" aria-hidden="true"></i> يوم كامل</button>
+          <button type="button" data-period="morning" data-period-label="فترة صباحية" data-period-price="280" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sunrise" aria-hidden="true"></i> صباحي</button>
+          <button type="button" data-period="evening" data-period-label="فترة مسائية" data-period-price="300" data-period-unit="فترة" aria-pressed="false"><i class="bi bi-sunset" aria-hidden="true"></i> مسائي</button>
+        </div></fieldset>
+        <div class="mobile-booking-sheet__block">
+          <div class="mobile-booking-sheet__label"><strong>التاريخ</strong><span data-date-summary="profile-dates">اختر التاريخ من التقويم</span></div>
+          <div class="mobile-calendar" data-calendar="profile-dates">
+            <input type="hidden" name="start" value="" data-calendar-start><input type="hidden" name="end" value="" data-calendar-end>
+            <div class="mobile-calendar__range"><div class="is-active" data-calendar-start-state><span>الوصول</span><strong data-calendar-start-label>اختر تاريخاً</strong></div><i class="bi bi-arrow-left" aria-hidden="true"></i><div data-calendar-end-state><span>المغادرة</span><strong data-calendar-end-label>اختياري</strong></div></div>
+            <p class="mobile-calendar__guidance" data-calendar-guidance>اختر تاريخ الوصول، ثم المغادرة للإقامة الليلية.</p>
+            <div class="mobile-calendar__toolbar"><button type="button" data-calendar-previous aria-label="الشهر السابق"><i class="bi bi-chevron-right" aria-hidden="true"></i></button><strong data-calendar-title></strong><button type="button" data-calendar-next aria-label="الشهر التالي"><i class="bi bi-chevron-left" aria-hidden="true"></i></button></div>
+            <div class="mobile-calendar__weekdays" aria-hidden="true"><span>ن</span><span>ث</span><span>ر</span><span>خ</span><span>ج</span><span>س</span><span>ح</span></div>
+            <div class="mobile-calendar__days" data-calendar-days></div>
+            <p class="mobile-calendar__summary" data-calendar-summary></p>
+          </div>
+        </div>
+        <div class="mobile-booking-sheet__block"><div class="mobile-booking-sheet__label"><strong>الضيوف</strong><span data-guest-summary="profile-guests">2 بالغين</span></div><div class="mobile-guest-list" data-guest-picker="profile-guests" data-capacity="6">
+          <div class="mobile-guest-row"><div><strong>البالغون</strong><small>ضيف بالغ واحد على الأقل</small></div><div class="mobile-counter"><button type="button" data-counter-action="decrease" data-guest-type="adults" aria-label="تقليل البالغين"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="adults">2</output><button type="button" data-counter-action="increase" data-guest-type="adults" aria-label="زيادة البالغين"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" name="adults" min="1" max="6" value="2" data-guest-value="adults"></div></div>
+          <div class="mobile-guest-row"><div><strong>الأطفال</strong><small>يُحتسبون ضمن سعة الإقامة</small></div><div class="mobile-counter"><button type="button" data-counter-action="decrease" data-guest-type="children" aria-label="تقليل الأطفال"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="children">0</output><button type="button" data-counter-action="increase" data-guest-type="children" aria-label="زيادة الأطفال"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" name="children" min="0" max="5" value="0" data-guest-value="children"></div></div>
+          <div class="mobile-guest-row"><div><strong>الرُضّع</strong><small>فئة مستقلة تُراجع حسب إعدادات السوق</small></div><div class="mobile-counter"><button type="button" data-counter-action="decrease" data-guest-type="infants" aria-label="تقليل الرضع"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="infants">0</output><button type="button" data-counter-action="increase" data-guest-type="infants" aria-label="زيادة الرضع"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" name="infants" min="0" max="6" value="0" data-guest-value="infants"></div></div>
+          <p class="mobile-booking-sheet__capacity" data-guest-capacity-status role="status">السعة القصوى 6 ضيوف من البالغين والأطفال.</p>
+        </div></div>
+      </div>
+      <div class="mobile-sheet__footer mobile-booking-sheet__footer"><div><small>تقدير الإقامة</small><strong><span data-sheet-price>—</span> <span data-sheet-currency hidden>د.أ</span></strong><em>يُراجع السعر والتوفر قبل إنشاء الطلب</em></div><button class="mobile-button mobile-button--primary" type="submit">متابعة للمراجعة</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="mobile-sheet mobile-amenities-sheet" id="amenities-sheet" aria-labelledby="amenities-sheet-title"><div class="mobile-sheet__handle" aria-hidden="true"></div><div class="mobile-sheet__header"><div><h2 id="amenities-sheet-title">المرافق والخدمات</h2><p>المرافق المنشورة لهذه الإقامة.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-sheet__body"><ul><li><i class="bi bi-water" aria-hidden="true"></i><span><strong>مسبح خاص</strong><small>لضيوف الفيلا فقط</small></span></li><li><i class="bi bi-wifi" aria-hidden="true"></i><span><strong>إنترنت لاسلكي</strong><small>متوفر في المساحات الداخلية</small></span></li><li><i class="bi bi-cup-hot" aria-hidden="true"></i><span><strong>مطبخ مجهز</strong><small>أدوات أساسية وأجهزة كاملة</small></span></li><li><i class="bi bi-snow" aria-hidden="true"></i><span><strong>تكييف مركزي</strong><small>في غرف النوم والمعيشة</small></span></li><li><i class="bi bi-car-front" aria-hidden="true"></i><span><strong>موقفان خاصان</strong><small>داخل حدود الإقامة</small></span></li><li><i class="bi bi-fire" aria-hidden="true"></i><span><strong>منطقة شواء</strong><small>ضمن الجلسة الخارجية</small></span></li><li><i class="bi bi-tv" aria-hidden="true"></i><span><strong>شاشة ذكية</strong><small>في منطقة المعيشة</small></span></li></ul></div><div class="mobile-sheet__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>تم</button></div></dialog>
+
+  <dialog class="mobile-sheet mobile-reviews-sheet" id="reviews-sheet" aria-labelledby="reviews-sheet-title"><div class="mobile-sheet__handle" aria-hidden="true"></div><div class="mobile-sheet__header"><div><h2 id="reviews-sheet-title">تقييمات الإقامات المكتملة</h2><p><span class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span> · 98 تقييماً موثّقاً</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-sheet__body"><article><div><strong>سارة العتيبي</strong><small>يوليو 2026 · إقامة موثّقة</small></div><blockquote>فيلا نظيفة وهادئة، والمساحات مناسبة جداً للعائلة.</blockquote></article><article><div><strong>عمر الخطيب</strong><small>يونيو 2026 · إقامة موثّقة</small></div><blockquote>الموقع واضح والتفاصيل دقيقة، وكانت خطوات طلب الإقامة سهلة.</blockquote></article><article><div><strong>ليان مراد</strong><small>مايو 2026 · إقامة موثّقة</small></div><blockquote>أحببنا اتصال الجلسة الخارجية بالمسبح وخصوصية المكان.</blockquote></article></div></dialog>
+
+  <dialog class="mobile-dialog mobile-price-dialog" id="price-info-dialog" aria-labelledby="price-info-title"><div class="mobile-dialog__header"><div><h2 id="price-info-title">عن السعر المعروض</h2><p>هذا سعر ابتدائي وتقديري. يصبح السعر نهائياً فقط بعد التحقق من الفترة والتواريخ والتوفر والضرائب والسياسات.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>فهمت</button></div></dialog>
+
+  <dialog class="mobile-dialog" id="sign-in-dialog" aria-labelledby="sign-in-title"><div class="mobile-dialog__header"><div><h2 id="sign-in-title">احفظ اختياراتك</h2><p>سجّل الدخول لمزامنة المفضلة وإكمال الطلب لاحقاً.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--quiet" type="button" data-dialog-close>ليس الآن</button><a class="mobile-button mobile-button--primary" href="05-login.html?reason=favorites&amp;returnTo=03-villa-profile.html">تسجيل الدخول</a></div></dialog>
+
+  <script type="module" src="assets/js/pages/profile.js"></script>
+</body>
+</html>

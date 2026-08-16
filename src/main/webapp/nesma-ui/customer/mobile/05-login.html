@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="سجّل الدخول لحفظ الإقامات ومتابعة طلباتك من تجربة الهاتف.">
+  <title>تسجيل الدخول</title>
+  <link rel="icon" href="../web/assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="../web/assets/images/villa-modern-640.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../web/assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/pages/login.css?v=1">
+</head>
+<body>
+  <div class="mobile-app mobile-login-page">
+    <a class="mobile-skip-link" href="#login-form">انتقل إلى نموذج تسجيل الدخول</a>
+
+    <main>
+      <section class="mobile-login-hero" aria-labelledby="login-intro-title">
+        <picture>
+          <source srcset="../web/assets/images/villa-modern-640.webp 640w, ../web/assets/images/villa-modern-1280.webp 1280w" sizes="(max-width: 480px) 100vw, 480px" type="image/webp">
+          <img src="../web/assets/images/villa-modern.jpg" width="1536" height="1024" alt="فيلا عصرية ومسبح عند الغروب" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="mobile-login-hero__shade" aria-hidden="true"></div>
+
+        <header class="mobile-login-hero__header">
+          <a class="mobile-login-back" href="01-home-discovery.html" data-return-link aria-label="العودة إلى الشاشة السابقة"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+          <a class="mobile-login-mark" href="01-home-discovery.html" aria-label="الصفحة الرئيسية"><span><i class="bi bi-compass" aria-hidden="true"></i></span><strong>إقامة أجمل</strong></a>
+        </header>
+
+        <div class="mobile-login-hero__copy">
+          <p><i class="bi bi-stars" aria-hidden="true"></i> عُد إلى رحلتك</p>
+          <h1 id="login-intro-title">مرحباً بعودتك</h1>
+          <span data-login-context>احفظ اختياراتك وتابع طلبات الإقامة من أي جهاز.</span>
+        </div>
+      </section>
+
+      <section class="mobile-login-panel" aria-labelledby="login-title">
+        <div class="mobile-login-panel__handle" aria-hidden="true"></div>
+        <header class="mobile-login-heading">
+          <p>حسابك</p>
+          <h2 id="login-title">تسجيل الدخول</h2>
+          <span>اختر الطريقة المناسبة للمتابعة.</span>
+        </header>
+
+        <div class="mobile-login-providers" aria-label="خيارات تسجيل الدخول الخارجية">
+          <button class="mobile-login-provider mobile-login-provider--google" type="button" data-provider="Google"><i class="bi bi-google" aria-hidden="true"></i><span><small>المتابعة عبر</small><strong>Google</strong></span></button>
+          <button class="mobile-login-provider mobile-login-provider--apple" type="button" data-provider="Apple"><i class="bi bi-apple" aria-hidden="true"></i><span><small>المتابعة عبر</small><strong>Apple</strong></span></button>
+        </div>
+
+        <div class="mobile-login-divider"><span>أو باستخدام حسابك</span></div>
+
+        <form class="mobile-login-form" id="login-form" data-login-form novalidate>
+          <div class="mobile-login-field">
+            <label class="mobile-login-field__label" for="login-username">اسم المستخدم</label>
+            <div class="mobile-login-input"><i class="bi bi-person" aria-hidden="true"></i><input id="login-username" name="username" type="text" autocomplete="username" autocapitalize="none" spellcheck="false" required placeholder="أدخل اسم المستخدم" aria-describedby="login-username-error"></div>
+            <small class="mobile-login-field__error" id="login-username-error" data-error-for="login-username" aria-live="polite"></small>
+          </div>
+
+          <div class="mobile-login-field">
+            <div class="mobile-login-field__label-row"><label class="mobile-login-field__label" for="login-password">كلمة المرور</label><button type="button" data-auth-action="recovery">نسيت كلمة المرور؟</button></div>
+            <div class="mobile-login-input"><i class="bi bi-lock" aria-hidden="true"></i><input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="أدخل كلمة المرور" aria-describedby="login-password-error login-caps-lock"><button class="mobile-login-password-toggle" type="button" data-password-toggle aria-controls="login-password" aria-label="إظهار كلمة المرور" aria-pressed="false"><i class="bi bi-eye" aria-hidden="true"></i></button></div>
+            <small class="mobile-login-caps" id="login-caps-lock" data-caps-lock hidden><i class="bi bi-exclamation-circle" aria-hidden="true"></i> مفتاح الأحرف الكبيرة مفعّل.</small>
+            <small class="mobile-login-field__error" id="login-password-error" data-error-for="login-password" aria-live="polite"></small>
+          </div>
+
+          <button class="mobile-button mobile-button--primary mobile-login-submit" type="submit" data-login-submit><span data-login-submit-label>تسجيل الدخول</span><i class="bi bi-arrow-left" aria-hidden="true"></i></button>
+          <p class="mobile-login-form__status" data-login-status role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="mobile-login-register">ليس لديك حساب؟ <button type="button" data-auth-action="register">إنشاء حساب جديد</button></p>
+        <p class="mobile-login-security"><i class="bi bi-shield-check" aria-hidden="true"></i><span>لن نطلب منك بيانات الدفع عند تسجيل الدخول.</span></p>
+      </section>
+    </main>
+  </div>
+
+  <dialog class="mobile-dialog mobile-login-notice" id="login-notice" aria-labelledby="login-notice-title"><div class="mobile-login-notice__icon"><i class="bi bi-shield-check" aria-hidden="true" data-notice-icon></i></div><div class="mobile-dialog__header"><div><h2 id="login-notice-title" data-notice-title>متابعة آمنة</h2><p data-notice-copy>تحتاج هذه الخطوة إلى خدمة الهوية المتصلة.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>فهمت</button></div></dialog>
+
+  <script type="module" src="assets/js/pages/login.js?v=1"></script>
+</body>
+</html>

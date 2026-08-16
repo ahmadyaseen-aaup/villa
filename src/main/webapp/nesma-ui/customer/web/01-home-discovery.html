@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="اكتشف إقامات وفللاً مختارة في وجهات متعددة، وابحث من دون فرض نوع حجز أو تواريخ مسبقة.">
+  <title>اكتشف إقامتك القادمة</title>
+  <link rel="icon" href="assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/hero-villa.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/marketplace-header.css">
+  <link rel="stylesheet" href="assets/css/marketplace-footer.css">
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body class="home-page">
+  <a class="skip-link" href="#main-content">انتقل إلى المحتوى</a>
+
+  <header class="site-header marketplace-header home-header" data-sticky-header>
+    <div class="navbar page-shell">
+      <div class="marketplace-header__main home-header__main">
+        <nav class="nav-links" id="main-navigation" data-nav-menu data-sticky-navigation aria-label="التنقل الرئيسي">
+          <a class="nav-link" href="01-home-discovery.html" aria-current="page">الرئيسية</a>
+          <a class="nav-link" href="#stories">استكشف</a>
+          <a class="nav-link" href="#seasonal-offers">عروض هذا الموسم</a>
+          <a class="nav-link" href="04-booking-request-review.html">حجوزاتي</a>
+          <a class="nav-link marketplace-header__mobile-language home-mobile-language" href="#"><i class="bi bi-globe2" aria-hidden="true"></i> العربية</a>
+        </nav>
+
+        <div class="home-header-search" data-sticky-search role="search" aria-label="البحث السريع عن إقامة" aria-hidden="true" inert>
+          <button class="home-header-search__field" type="button" data-popover-target="destination-popover" data-popover-anchor="header">
+            <span><strong>إلى أين؟</strong><small data-destination-summary>كل الوجهات</small></span>
+          </button>
+          <button class="home-header-search__field" type="button" data-popover-target="dates-popover" data-popover-anchor="header">
+            <span><strong>متى؟</strong><small data-date-summary="home-dates">أي وقت</small></span>
+          </button>
+          <button class="home-header-search__field" type="button" data-popover-target="guests-popover" data-popover-anchor="header">
+            <span><strong>من؟</strong><small data-guest-summary="home-guests">2 بالغين</small></span>
+          </button>
+          <button class="home-header-search__submit" type="button" data-sticky-search-submit aria-label="ابحث عن إقامة">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+
+      <button class="menu-toggle marketplace-header__menu home-menu-toggle" type="button" data-menu-toggle data-menu-open-label="فتح القائمة" data-menu-close-label="إغلاق القائمة" aria-controls="main-navigation" aria-expanded="false" aria-label="فتح القائمة">
+        <span>القائمة</span>
+      </button>
+
+      <div class="nav-actions">
+        <button class="icon-action" type="button" aria-label="تغيير اللغة">
+          <i class="bi bi-globe2" aria-hidden="true"></i>
+          <span>العربية</span>
+        </button>
+        <button class="icon-action" type="button" data-dialog-open="sign-in-dialog" aria-label="المفضلة">
+          <i class="bi bi-heart" aria-hidden="true"></i>
+          <span>المفضلة</span>
+        </button>
+        <a class="icon-action" href="05-login.html" aria-label="تسجيل الدخول">
+          <i class="bi bi-person" aria-hidden="true"></i>
+          <span>تسجيل الدخول</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="home-connectivity" data-connectivity role="status" aria-live="polite" hidden>
+    <div class="page-shell">
+      <span><i class="bi bi-wifi-off" aria-hidden="true"></i> أنت غير متصل. سنُبقي المحتوى المحمّل متاحاً قدر الإمكان.</span>
+      <button type="button" data-connectivity-retry>إعادة المحاولة</button>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="home-hero" aria-labelledby="hero-title">
+      <div class="home-hero__content page-shell">
+        <div class="home-hero__copy">
+          <h1 id="hero-title">مكانك المثالي يبدأ هنا</h1>
+          <p>إقامات مميزة في أجمل الوجهات</p>
+        </div>
+      </div>
+    </section>
+
+    <form class="home-search page-shell" data-discovery-form aria-label="البحث عن إقامة">
+      <span class="home-search__sticky-sentinel" data-sticky-search-sentinel aria-hidden="true"></span>
+      <button class="home-search__field" type="button" data-popover-target="destination-popover">
+        <i class="bi bi-geo-alt" aria-hidden="true"></i>
+        <span><strong>إلى أين تريد أن تذهب؟</strong><small data-destination-summary>الدولة، المدينة أو اسم الإقامة</small></span>
+      </button>
+
+      <button class="home-search__field" type="button" data-popover-target="dates-popover">
+        <i class="bi bi-calendar3" aria-hidden="true"></i>
+        <span><strong>متى تريد الحجز؟</strong><small data-date-summary="home-dates">التواريخ اختيارية</small></span>
+      </button>
+
+      <button class="home-search__field" type="button" data-popover-target="guests-popover">
+        <i class="bi bi-people" aria-hidden="true"></i>
+        <span><strong>الضيوف</strong><small data-guest-summary="home-guests">2 بالغين</small></span>
+      </button>
+
+      <button class="button button--primary home-search__submit" type="submit">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <span>ابحث عن إقامة</span>
+      </button>
+
+      <div class="popover home-search__popover home-search__popover--destination" id="destination-popover" data-popover hidden>
+        <label class="field-label" for="home-destination">ابحث عن دولة، مدينة، منطقة، معلم أو إقامة</label>
+        <div class="field-with-icon">
+          <i class="bi bi-search" aria-hidden="true"></i>
+          <input class="field" id="home-destination" name="destination" data-destination-input placeholder="مثال: العقبة أو البحر الميت" autocomplete="off" role="combobox" aria-autocomplete="list" aria-controls="destination-suggestions" aria-expanded="false">
+        </div>
+        <p class="home-destination-status" data-destination-status aria-live="polite">اكتب للبحث أو اختر من الوجهات الشائعة.</p>
+        <div class="home-destination-suggestions" id="destination-suggestions" role="listbox" aria-label="اقتراحات الوجهات">
+          <section class="home-destination-group" data-recent-destination-group role="group" aria-labelledby="recent-destinations-title" hidden>
+            <h3 id="recent-destinations-title"><i class="bi bi-clock-history" aria-hidden="true"></i> عمليات بحث حديثة</h3>
+            <div data-recent-destination-list></div>
+          </section>
+          <section class="home-destination-group" data-destination-group role="group" aria-labelledby="popular-destinations-title">
+            <h3 id="popular-destinations-title"><i class="bi bi-compass" aria-hidden="true"></i> وجهات شائعة</h3>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="العقبة" data-destination-search="العقبة الاردن الأردن مدينة ساحل">
+              <i class="bi bi-building" aria-hidden="true"></i><span><strong>العقبة</strong><small>مدينة · الأردن</small></span>
+            </button>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="دبي" data-destination-search="دبي الامارات الإمارات مدينة">
+              <i class="bi bi-building" aria-hidden="true"></i><span><strong>دبي</strong><small>مدينة · الإمارات</small></span>
+            </button>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="إسطنبول" data-destination-search="اسطنبول إسطنبول تركيا مدينة">
+              <i class="bi bi-building" aria-hidden="true"></i><span><strong>إسطنبول</strong><small>مدينة · تركيا</small></span>
+            </button>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="البحر الميت" data-destination-search="البحر الميت الاردن الأردن منطقة معلم">
+              <i class="bi bi-pin-map" aria-hidden="true"></i><span><strong>البحر الميت</strong><small>منطقة ومعلم · الأردن</small></span>
+            </button>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="برج خليفة" data-destination-search="برج خليفة دبي الامارات الإمارات معلم">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><strong>برج خليفة</strong><small>معلم · دبي</small></span>
+            </button>
+            <button class="home-destination-option" type="button" role="option" aria-selected="false" data-destination-option="فيلا الشرفة" data-destination-search="فيلا الشرفة تركيا إقامة عقار">
+              <i class="bi bi-house-door" aria-hidden="true"></i><span><strong>فيلا الشرفة</strong><small>إقامة · تركيا</small></span>
+            </button>
+          </section>
+          <div class="home-destination-empty" data-destination-empty hidden>
+            <i class="bi bi-search" aria-hidden="true"></i><strong>لا توجد نتيجة مطابقة</strong><span>جرّب اسم مدينة، منطقة، معلم أو إقامة.</span>
+            <button type="button" data-destination-show-all>عرض الوجهات الشائعة</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="popover home-search__popover home-search__popover--dates" id="dates-popover" data-popover hidden>
+        <div class="home-calendar" data-date-picker="home-dates" data-range-calendar aria-label="اختيار تاريخ الوصول والمغادرة">
+          <div class="home-calendar__header">
+            <button type="button" data-calendar-previous aria-label="الشهر السابق"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+            <h2 data-calendar-heading aria-live="polite"></h2>
+            <button type="button" data-calendar-next aria-label="الشهر التالي"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+          </div>
+          <div class="home-calendar__months" data-calendar-months></div>
+          <p class="home-calendar__status" data-calendar-status role="status" aria-live="polite">اختر تاريخ الوصول، ثم تاريخ المغادرة.</p>
+          <input type="hidden" name="start" data-date-start>
+          <input type="hidden" name="end" data-date-end>
+          <div class="home-calendar__actions">
+            <button class="button button--quiet" type="button" data-calendar-clear>مسح</button>
+            <span>
+              <button class="button button--quiet" type="button" data-popover-close>إلغاء</button>
+              <button class="button button--primary" type="button" data-apply-dates disabled>تطبيق</button>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="popover home-search__popover home-search__popover--guests" id="guests-popover" data-popover hidden>
+        <div class="guest-list" data-guest-picker="home-guests">
+          <div class="guest-row">
+            <span><strong>البالغون</strong><small>الفئة الأساسية للضيوف</small></span>
+            <span class="counter">
+              <button type="button" data-counter-action="decrease" data-guest-type="adults" aria-label="إنقاص عدد البالغين"><i class="bi bi-dash" aria-hidden="true"></i></button>
+              <output data-guest-output="adults">2</output>
+              <button type="button" data-counter-action="increase" data-guest-type="adults" aria-label="زيادة عدد البالغين"><i class="bi bi-plus" aria-hidden="true"></i></button>
+              <input type="hidden" name="adults" value="2" min="1" max="20" data-guest-count="adults">
+            </span>
+          </div>
+          <div class="guest-row">
+            <span><strong>الأطفال</strong><small>يُسجّل العدد بشكل مستقل</small></span>
+            <span class="counter">
+              <button type="button" data-counter-action="decrease" data-guest-type="children" aria-label="إنقاص عدد الأطفال"><i class="bi bi-dash" aria-hidden="true"></i></button>
+              <output data-guest-output="children">0</output>
+              <button type="button" data-counter-action="increase" data-guest-type="children" aria-label="زيادة عدد الأطفال"><i class="bi bi-plus" aria-hidden="true"></i></button>
+              <input type="hidden" name="children" value="0" min="0" max="12" data-guest-count="children">
+            </span>
+          </div>
+          <div class="guest-row">
+            <span><strong>الرُضّع</strong><small>يُسجّل العدد بشكل مستقل</small></span>
+            <span class="counter">
+              <button type="button" data-counter-action="decrease" data-guest-type="infants" aria-label="إنقاص عدد الرضع"><i class="bi bi-dash" aria-hidden="true"></i></button>
+              <output data-guest-output="infants">0</output>
+              <button type="button" data-counter-action="increase" data-guest-type="infants" aria-label="زيادة عدد الرضع"><i class="bi bi-plus" aria-hidden="true"></i></button>
+              <input type="hidden" name="infants" value="0" min="0" max="6" data-guest-count="infants">
+            </span>
+          </div>
+          <div class="popover__actions"><button class="button button--primary" type="button" data-popover-close>تم</button></div>
+        </div>
+      </div>
+    </form>
+
+    <aside class="home-mobile-search-summary" data-mobile-search-summary aria-label="ملخص البحث" aria-hidden="true" hidden>
+      <button type="button" data-scroll-to-search tabindex="-1">
+        <i class="bi bi-search" aria-hidden="true"></i>
+        <span><strong data-mobile-summary-destination>كل الوجهات</strong><small><span data-mobile-summary-dates>أي وقت</span> · <span data-mobile-summary-guests>2 بالغين</span></small></span>
+        <b>تعديل</b>
+      </button>
+    </aside>
+
+    <div class="home-content page-shell">
+      <section class="home-section reveal" id="stories" aria-labelledby="stories-title">
+        <div class="home-section__heading">
+          <div class="home-section__title"><h2 id="stories-title">قصص الإقامات</h2><span class="home-sponsored-label">ممول</span></div>
+          <a class="home-view-all" href="02-search-map-results.html?sponsored=true">عرض الكل</a>
+        </div>
+        <div class="home-rail-wrap home-rail-wrap--stories">
+          <button class="home-rail-arrow home-rail-arrow--next" type="button" data-rail-control data-rail-target="stories-track" data-rail-direction="next" aria-label="القصص التالية"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <div class="home-rail home-rail--stories" id="stories-track" aria-label="قصص الإقامات الممولة">
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="terrace-villa" data-story-title="فيلا الشرفة" data-story-location="تركيا" data-story-href="03-villa-profile.html" data-story-caption="جولة سريعة داخل فيلا الشرفة وإطلالتها الهادئة." data-story-slides="assets/images/hero-villa.webp,assets/images/villa-modern.webp,assets/images/city-istanbul.webp" aria-label="عرض قصة فيلا الشرفة في تركيا، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/hero-villa.webp" type="image/webp"><img src="assets/images/hero-villa.jpg" width="1536" height="1024" alt="فيلا الشرفة في تركيا" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>فيلا الشرفة</strong><small>تركيا</small></span>
+            </button>
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="pine-house" data-story-title="بيت الصنوبر" data-story-location="إيطاليا" data-story-href="03-villa-profile.html" data-story-caption="تفاصيل حجرية دافئة ومساحات مهيأة لإقامة هادئة." data-story-slides="assets/images/villa-stone.webp,assets/images/villa-olive.webp,assets/images/destinations-panorama.webp" aria-label="عرض قصة بيت الصنوبر في إيطاليا، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="بيت الصنوبر في إيطاليا" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>بيت الصنوبر</strong><small>إيطاليا</small></span>
+            </button>
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="olive-house" data-story-title="دار الزيتون" data-story-location="لبنان" data-story-href="03-villa-profile.html" data-story-caption="إقامة خضراء تحيط بها الطبيعة ومساحات الجلوس الخارجية." data-story-slides="assets/images/villa-olive.webp,assets/images/villa-stone.webp,assets/images/city-aqaba.webp" aria-label="عرض قصة دار الزيتون في لبنان، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="دار الزيتون في لبنان" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>دار الزيتون</strong><small>لبنان</small></span>
+            </button>
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="sea-pearl" data-story-title="لؤلؤة البحر" data-story-location="اليونان" data-story-href="03-villa-profile.html" data-story-caption="مشاهد قريبة من البحر ومسبح خاص لأيام الصيف." data-story-slides="assets/images/villa-summer.webp,assets/images/city-aqaba.webp,assets/images/hero-villa.webp" aria-label="عرض قصة لؤلؤة البحر في اليونان، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="لؤلؤة البحر في اليونان" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>لؤلؤة البحر</strong><small>اليونان</small></span>
+            </button>
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="iris-house" data-story-title="دار السوسن" data-story-location="المغرب" data-story-href="03-villa-profile.html" data-story-caption="تصميم معاصر ومساحات مضيئة للاسترخاء مع العائلة." data-story-slides="assets/images/villa-modern.webp,assets/images/villa-summer.webp,assets/images/city-dubai.webp" aria-label="عرض قصة دار السوسن في المغرب، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="دار السوسن في المغرب" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>دار السوسن</strong><small>المغرب</small></span>
+            </button>
+            <button class="home-story-card home-story-card--alt" type="button" data-story-trigger data-story-id="mountain-meadows" data-story-title="مروج الجبل" data-story-location="عُمان" data-story-href="03-villa-profile.html" data-story-caption="هدوء الجبل مع تفاصيل داخلية دافئة وإطلالة مفتوحة." data-story-slides="assets/images/villa-stone.webp,assets/images/villa-modern.webp,assets/images/villa-olive.webp" aria-label="عرض قصة مروج الجبل في عُمان، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="مروج الجبل في عُمان" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>مروج الجبل</strong><small>عُمان</small></span>
+            </button>
+            <button class="home-story-card" type="button" data-story-trigger data-story-id="palm-house" data-story-title="دار النخيل" data-story-location="الإمارات" data-story-href="03-villa-profile.html" data-story-caption="إقامة عصرية قريبة من المدينة مع خصوصية ومساحة رحبة." data-story-slides="assets/images/villa-modern.webp,assets/images/city-dubai.webp,assets/images/villa-summer.webp" aria-label="عرض قصة دار النخيل في الإمارات، محتوى ممول">
+              <span class="home-story-card__ring"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern.webp 1536w" sizes="7rem" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="دار النخيل في الإمارات" loading="lazy" decoding="async"></picture><span class="home-story-card__badge">ممول</span></span>
+              <span class="home-story-card__text"><strong>دار النخيل</strong><small>الإمارات</small></span>
+            </button>
+          </div>
+          <button class="home-rail-arrow home-rail-arrow--previous" type="button" data-rail-control data-rail-target="stories-track" data-rail-direction="previous" aria-label="القصص السابقة"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        </div>
+      </section>
+
+      <section class="home-section reveal" aria-labelledby="destinations-title">
+        <div class="home-section__heading">
+          <div class="home-section__title"><h2 id="destinations-title">استكشف الوجهات</h2></div>
+          <a class="home-view-all" href="02-search-map-results.html">عرض الكل</a>
+        </div>
+        <div class="home-destination-grid">
+          <a class="home-destination-card home-destination-card--featured" href="02-search-map-results.html?destination=العقبة">
+            <picture><source srcset="assets/images/city-aqaba-640.webp 640w, assets/images/city-aqaba-1280.webp 1280w, assets/images/city-aqaba.webp 1536w" sizes="(max-width: 760px) 100vw, 42vw" type="image/webp"><img src="assets/images/city-aqaba.jpg" width="1536" height="1024" alt="ساحل العقبة وإقامة مطلة على البحر" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><small>وجهة مميزة</small><strong>العقبة</strong><span>ساحل هادئ وإقامات قريبة من البحر.</span></span>
+          </a>
+          <a class="home-destination-card home-destination-card--wide" href="02-search-map-results.html?destination=أنطاليا">
+            <picture><source srcset="assets/images/destinations-panorama-640.webp 640w, assets/images/destinations-panorama-1280.webp 1280w, assets/images/destinations-panorama.webp 1983w" sizes="(max-width: 760px) 100vw, 32vw" type="image/webp"><img src="assets/images/destinations-panorama.jpg" width="1983" height="793" alt="الساحل الطبيعي في أنطاليا" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><strong>أنطاليا</strong><span>شواطئ وطبيعة لإقامة صيفية هادئة.</span></span>
+          </a>
+          <a class="home-destination-card home-destination-card--standard" href="02-search-map-results.html?destination=دبي">
+            <picture><source srcset="assets/images/city-dubai-640.webp 640w, assets/images/city-dubai-1280.webp 1280w, assets/images/city-dubai.webp 1536w" sizes="(max-width: 760px) 100vw, 25vw" type="image/webp"><img src="assets/images/city-dubai.jpg" width="1536" height="1024" alt="أفق دبي الحديث" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><strong>دبي</strong><span>إقامات عصرية قريبة من المدينة.</span></span>
+          </a>
+          <a class="home-destination-card home-destination-card--compact" href="02-search-map-results.html?destination=عجلون">
+            <picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive-1280.webp 1280w, assets/images/villa-olive.webp 1536w" sizes="(max-width: 760px) 100vw, 17vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="الطبيعة الخضراء في عجلون" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><strong>عجلون</strong><span>طبيعة خضراء وأجواء عائلية.</span></span>
+          </a>
+          <a class="home-destination-card home-destination-card--compact" href="02-search-map-results.html?destination=إسطنبول">
+            <picture><source srcset="assets/images/city-istanbul-640.webp 640w, assets/images/city-istanbul-1280.webp 1280w, assets/images/city-istanbul.webp 1535w" sizes="(max-width: 760px) 100vw, 17vw" type="image/webp"><img src="assets/images/city-istanbul.jpg" width="1535" height="1024" alt="مدينة إسطنبول ومضيق البوسفور" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><strong>إسطنبول</strong><span>مدينة نابضة وإقامات بإطلالات متنوعة.</span></span>
+          </a>
+          <a class="home-destination-card home-destination-card--standard" href="02-search-map-results.html?destination=صلالة">
+            <picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive-1280.webp 1280w, assets/images/villa-olive.webp 1536w" sizes="(max-width: 760px) 100vw, 25vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="إقامة بين الطبيعة في صلالة" loading="lazy" decoding="async"></picture>
+            <span class="home-destination-card__content"><strong>صلالة</strong><span>خضرة موسمية ومساحات للاسترخاء.</span></span>
+          </a>
+        </div>
+      </section>
+
+      <section class="home-section reveal" id="seasonal-offers" aria-labelledby="offers-title">
+        <div class="home-section__heading home-section__heading--simple"><div class="home-section__title"><h2 id="offers-title">عروض الموسم</h2></div></div>
+        <div class="home-campaign-grid">
+          <article class="home-campaign home-campaign--summer">
+            <picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer-1280.webp 1280w, assets/images/villa-summer.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="فيلا صيفية مطلة على البحر" loading="lazy" decoding="async"></picture>
+            <div class="home-campaign__copy"><span>عرض موسمي</span><h3>استمتع بالصيف</h3><p>خصم يصل إلى 25%</p><a class="button button--primary" href="02-search-map-results.html?offer=summer">اكتشف العرض</a></div>
+          </article>
+          <article class="home-campaign home-campaign--weekend">
+            <picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive-1280.webp 1280w, assets/images/villa-olive.webp 1536w" sizes="(max-width: 760px) 100vw, 50vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="إقامة هادئة بين أشجار الزيتون" loading="lazy" decoding="async"></picture>
+            <div class="home-campaign__copy"><span>نهاية الأسبوع</span><h3>لحظات تبقى</h3><p>إقامات مختارة لأيام هادئة</p><a class="button button--primary" href="02-search-map-results.html?offer=weekend">استكشف الآن</a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section reveal" aria-labelledby="popular-title">
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="popular-title">الأكثر رواجاً</h2></div><a class="home-view-all" href="02-search-map-results.html">عرض الكل</a></div>
+        <div class="home-rail-wrap">
+          <button class="home-rail-arrow home-rail-arrow--next" type="button" data-rail-control data-rail-target="popular-track" data-rail-direction="next" aria-label="الإقامات التالية"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <div class="home-rail home-rail--properties" id="popular-track">
+            <article class="home-property-card" data-track-property data-property-id="garden-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern.webp 1536w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="فيلا جاردن في دبي" loading="lazy" decoding="async"></picture><span><strong>فيلا جاردن</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا جاردن"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,280 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="noor-salalah">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive.webp 1536w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="فيلا نور في صلالة" loading="lazy" decoding="async"></picture><span><strong>فيلا نور</strong><small>صلالة، عُمان</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا نور"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بحرية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>890 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="still-bali">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer.webp 1536w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="فيلا ستيل في بالي" loading="lazy" decoding="async"></picture><span><strong>فيلا ستيل</strong><small>بالي، إندونيسيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا ستيل"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 10 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 5 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>2,320 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="cypress-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone.webp 1536w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="دار السرو في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>دار السرو</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار السرو"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 4 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> غرفتان</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,050 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="amalia-muscat">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/hero-villa.webp" type="image/webp"><img src="assets/images/hero-villa.jpg" width="1536" height="1024" alt="فيلا أماليا في مسقط" loading="lazy" decoding="async"></picture><span><strong>فيلا أماليا</strong><small>مسقط، عُمان</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا أماليا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بحرية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,460 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="terrace-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern.webp 1536w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="بيت الشرفة في العقبة" loading="lazy" decoding="async"></picture><span><strong>بيت الشرفة</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الشرفة"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.6</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>980 ر.س.</strong></span></div>
+            </article>
+          </div>
+          <button class="home-rail-arrow home-rail-arrow--previous" type="button" data-rail-control data-rail-target="popular-track" data-rail-direction="previous" aria-label="الإقامات السابقة"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        </div>
+      </section>
+
+      <section class="home-section home-city-collection reveal" aria-labelledby="aqaba-villas-title">
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="aqaba-villas-title">فلل في العقبة</h2></div><a class="home-view-all" href="02-search-map-results.html?destination=العقبة">عرض الكل</a></div>
+        <div class="home-rail-wrap">
+          <button class="home-rail-arrow home-rail-arrow--next" type="button" data-rail-control data-rail-target="aqaba-villas-track" data-rail-direction="next" aria-label="فلل العقبة التالية"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <div class="home-rail home-rail--properties" id="aqaba-villas-track">
+            <article class="home-property-card" data-track-property data-property-id="coral-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/aqaba-villa-coral-640.webp 640w, assets/images/villas/aqaba-villa-coral-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/aqaba-villa-coral.jpg" width="1280" height="853" alt="فيلا المرجان في العقبة" loading="lazy" decoding="async"></picture><span><strong>فيلا المرجان</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا المرجان"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,240 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="heights-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/aqaba-villa-hillside-640.webp 640w, assets/images/villas/aqaba-villa-hillside-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/aqaba-villa-hillside.jpg" width="1280" height="853" alt="دار المرتفعات في العقبة" loading="lazy" decoding="async"></picture><span><strong>دار المرتفعات</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار المرتفعات"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بحرية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,080 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="courtyard-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/aqaba-villa-courtyard-640.webp 640w, assets/images/villas/aqaba-villa-courtyard-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/aqaba-villa-courtyard.jpg" width="1280" height="853" alt="بيت الفناء في العقبة" loading="lazy" decoding="async"></picture><span><strong>بيت الفناء</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الفناء"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 4 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> غرفتان</span><span><i class="bi bi-water" aria-hidden="true"></i> قرب الشاطئ</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>780 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="marina-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/aqaba-villa-marina-640.webp 640w, assets/images/villas/aqaba-villa-marina-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/aqaba-villa-marina.jpg" width="1280" height="853" alt="فيلا المرسى في العقبة" loading="lazy" decoding="async"></picture><span><strong>فيلا المرسى</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا المرسى"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة المرسى</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,460 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="palm-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/aqaba-villa-garden-640.webp 640w, assets/images/villas/aqaba-villa-garden-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/aqaba-villa-garden.jpg" width="1280" height="853" alt="دار النخيل في العقبة" loading="lazy" decoding="async"></picture><span><strong>دار النخيل</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار النخيل"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 10 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 5 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,590 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="sunset-aqaba">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/hero-villa-640.webp 640w, assets/images/hero-villa-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/hero-villa.jpg" width="1536" height="1024" alt="بيت الغروب في العقبة" loading="lazy" decoding="async"></picture><span><strong>بيت الغروب</strong><small>العقبة، الأردن</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الغروب"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بحرية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>920 ر.س.</strong></span></div>
+            </article>
+          </div>
+          <button class="home-rail-arrow home-rail-arrow--previous" type="button" data-rail-control data-rail-target="aqaba-villas-track" data-rail-direction="previous" aria-label="فلل العقبة السابقة"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        </div>
+      </section>
+
+      <section class="home-section home-city-collection reveal" aria-labelledby="dubai-villas-title">
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="dubai-villas-title">فلل في دبي</h2></div><a class="home-view-all" href="02-search-map-results.html?destination=دبي">عرض الكل</a></div>
+        <div class="home-rail-wrap">
+          <button class="home-rail-arrow home-rail-arrow--next" type="button" data-rail-control data-rail-target="dubai-villas-track" data-rail-direction="next" aria-label="فلل دبي التالية"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <div class="home-rail home-rail--properties" id="dubai-villas-track">
+            <article class="home-property-card" data-track-property data-property-id="safa-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/dubai-villa-travertine-640.webp 640w, assets/images/villas/dubai-villa-travertine-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/dubai-villa-travertine.jpg" width="1280" height="853" alt="فيلا الصفا في دبي" loading="lazy" decoding="async"></picture><span><strong>فيلا الصفا</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا الصفا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 10 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 5 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>2,450 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="olive-courtyard-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/dubai-villa-courtyard-640.webp 640w, assets/images/villas/dubai-villa-courtyard-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/dubai-villa-courtyard.jpg" width="1280" height="853" alt="دار الزيتون في دبي" loading="lazy" decoding="async"></picture><span><strong>دار الزيتون</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار الزيتون"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> فناء خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,980 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="marina-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/dubai-villa-waterfront-640.webp 640w, assets/images/villas/dubai-villa-waterfront-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/dubai-villa-waterfront.jpg" width="1280" height="853" alt="بيت المارينا في دبي" loading="lazy" decoding="async"></picture><span><strong>بيت المارينا</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت المارينا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> واجهة مائية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>2,780 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="palm-garden-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/dubai-villa-garden-640.webp 640w, assets/images/villas/dubai-villa-garden-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/dubai-villa-garden.jpg" width="1280" height="853" alt="فيلا الحديقة في دبي" loading="lazy" decoding="async"></picture><span><strong>فيلا الحديقة</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا الحديقة"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,740 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="horizon-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="دار الأفق في دبي" loading="lazy" decoding="async"></picture><span><strong>دار الأفق</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار الأفق"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 12 ضيفاً</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 6 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>3,120 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="serenity-dubai">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="فيلا السكينة في دبي" loading="lazy" decoding="async"></picture><span><strong>فيلا السكينة</strong><small>دبي، الإمارات</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا السكينة"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة هادئة</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,560 ر.س.</strong></span></div>
+            </article>
+          </div>
+          <button class="home-rail-arrow home-rail-arrow--previous" type="button" data-rail-control data-rail-target="dubai-villas-track" data-rail-direction="previous" aria-label="فلل دبي السابقة"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        </div>
+      </section>
+
+      <section class="home-section home-city-collection reveal" aria-labelledby="istanbul-villas-title">
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="istanbul-villas-title">فلل في إسطنبول</h2></div><a class="home-view-all" href="02-search-map-results.html?destination=إسطنبول">عرض الكل</a></div>
+        <div class="home-rail-wrap">
+          <button class="home-rail-arrow home-rail-arrow--next" type="button" data-rail-control data-rail-target="istanbul-villas-track" data-rail-direction="next" aria-label="فلل إسطنبول التالية"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+          <div class="home-rail home-rail--properties" id="istanbul-villas-track">
+            <article class="home-property-card" data-track-property data-property-id="bosphorus-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/istanbul-villa-bosphorus-640.webp 640w, assets/images/villas/istanbul-villa-bosphorus-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/istanbul-villa-bosphorus.jpg" width="1280" height="853" alt="دار البوسفور في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>دار البوسفور</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار البوسفور"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بحرية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,850 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="forest-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/istanbul-villa-forest-640.webp 640w, assets/images/villas/istanbul-villa-forest-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/istanbul-villa-forest.jpg" width="1280" height="853" alt="فيلا الغابة في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>فيلا الغابة</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا الغابة"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة طبيعية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,320 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="wisteria-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/istanbul-villa-wisteria-640.webp 640w, assets/images/villas/istanbul-villa-wisteria-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/istanbul-villa-wisteria.jpg" width="1280" height="853" alt="بيت الياسمين في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>بيت الياسمين</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الياسمين"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,480 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="hilltop-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villas/istanbul-villa-hilltop-640.webp 640w, assets/images/villas/istanbul-villa-hilltop-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villas/istanbul-villa-hilltop.jpg" width="1280" height="853" alt="دار التلال في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>دار التلال</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ دار التلال"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 10 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 5 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة بانورامية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>2,060 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="cypress-grove-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="فيلا السرو في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>فيلا السرو</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا السرو"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 4 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> غرفتان</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>980 ر.س.</strong></span></div>
+            </article>
+            <article class="home-property-card" data-track-property data-property-id="coast-istanbul">
+              <a class="home-property-card__image" href="03-villa-profile.html"><picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer-1280.webp 1280w" sizes="(max-width: 760px) 80vw, 20vw" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="بيت الساحل في إسطنبول" loading="lazy" decoding="async"></picture><span><strong>بيت الساحل</strong><small>إسطنبول، تركيا</small></span></a>
+              <button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الساحل"><i class="bi bi-heart" aria-hidden="true"></i></button>
+              <div class="home-property-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة مائية</span></div>
+              <div class="home-property-card__meta"><span class="home-property-card__rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span><span class="home-property-card__price"><small>ابتداءً من</small><strong>1,420 ر.س.</strong></span></div>
+            </article>
+          </div>
+          <button class="home-rail-arrow home-rail-arrow--previous" type="button" data-rail-control data-rail-target="istanbul-villas-track" data-rail-direction="previous" aria-label="فلل إسطنبول السابقة"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+        </div>
+      </section>
+
+      <section class="home-section reveal" data-recent-section aria-labelledby="recently-viewed-title" hidden>
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="recently-viewed-title">شاهدتها مؤخراً</h2><span class="home-private-label"><i class="bi bi-shield-check" aria-hidden="true"></i> خاص بك</span></div><button class="home-view-all" type="button" data-consent-reset>مسح السجل</button></div>
+        <div class="home-rail home-rail--properties" data-recent-track></div>
+      </section>
+
+      <section class="home-section home-personalization reveal" aria-labelledby="personalization-title">
+        <div class="home-section__heading"><div class="home-section__title"><h2 id="personalization-title">اختيارات تناسب رحلتك</h2></div></div>
+        <div class="home-personalized-region" data-dynamic-region="recommendations" aria-live="polite">
+          <div data-region-state="loading" hidden>
+            <span class="visually-hidden">جارٍ تحميل الاقتراحات</span>
+            <div class="home-skeleton-grid" aria-hidden="true"><span></span><span></span><span></span></div>
+          </div>
+          <div class="home-state-panel" data-region-state="empty" hidden><i class="bi bi-compass" aria-hidden="true"></i><strong>لا توجد اقتراحات مناسبة الآن</strong><p>يمكنك متابعة الاستكشاف، وسنحدّث الاختيارات عندما تتوفر إشارات كافية.</p><a class="button button--quiet" href="02-search-map-results.html">استكشف كل الإقامات</a></div>
+          <div class="home-state-panel" data-region-state="error" hidden><i class="bi bi-exclamation-circle" aria-hidden="true"></i><strong>تعذر تحميل الاقتراحات</strong><p>لم تتغير تفضيلاتك. حاول مرة أخرى عندما تكون جاهزاً.</p><button class="button button--quiet" type="button" data-region-retry>إعادة المحاولة</button></div>
+          <div class="home-state-panel" data-region-state="offline" hidden><i class="bi bi-wifi-off" aria-hidden="true"></i><strong>الاقتراحات تحتاج إلى اتصال</strong><p>يمكنك متابعة تصفح المحتوى المحمّل، ثم المحاولة مجدداً.</p><button class="button button--quiet" type="button" data-region-retry>إعادة المحاولة</button></div>
+          <div data-region-state="ready">
+            <div class="home-recommendation-list" data-recommendation-list>
+              <a class="home-recommendation-item" href="03-villa-profile.html" data-affinity="العقبة الأردن البحر الميت">
+                <picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern.webp 1536w" sizes="(max-width: 760px) 88vw, 32vw" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="بيت الشرفة في العقبة" loading="lazy" decoding="async"></picture>
+                <span><small>اختيار عضوي</small><strong>بيت الشرفة</strong><b>العقبة، الأردن</b><em>حتى 6 ضيوف · مسبح خاص</em></span>
+              </a>
+              <a class="home-recommendation-item" href="03-villa-profile.html" data-affinity="دبي الإمارات برج خليفة">
+                <picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer.webp 1536w" sizes="(max-width: 760px) 88vw, 32vw" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="إقامة ذات مسبح في دبي" loading="lazy" decoding="async"></picture>
+                <span><small>اختيار عضوي</small><strong>دار النخيل</strong><b>دبي، الإمارات</b><em>حتى 8 ضيوف · مسبح خاص</em></span>
+              </a>
+              <a class="home-recommendation-item" href="03-villa-profile.html" data-affinity="إسطنبول اسطنبول تركيا فيلا الشرفة">
+                <picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone.webp 1536w" sizes="(max-width: 760px) 88vw, 32vw" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="دار السرو في إسطنبول" loading="lazy" decoding="async"></picture>
+                <span><small>اختيار عضوي</small><strong>دار السرو</strong><b>إسطنبول، تركيا</b><em>حتى 4 ضيوف · حديقة خاصة</em></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="home-story-viewer" data-story-viewer aria-labelledby="story-viewer-title" aria-describedby="story-viewer-caption">
+    <div class="home-story-viewer__media">
+      <img data-story-viewer-image src="assets/images/hero-villa.webp" alt="" width="1536" height="1024" decoding="async">
+    </div>
+    <div class="home-story-viewer__shade" aria-hidden="true"></div>
+    <div class="home-story-viewer__progress" data-story-progress aria-hidden="true"></div>
+    <header class="home-story-viewer__header">
+      <span class="home-story-viewer__avatar"><img data-story-viewer-avatar src="assets/images/hero-villa.webp" alt="" width="96" height="96" decoding="async"></span>
+      <span class="home-story-viewer__identity"><strong id="story-viewer-title" data-story-viewer-title></strong><small><span data-story-viewer-location></span><span class="home-story-viewer__sponsor">ممول</span></small></span>
+      <span class="home-story-viewer__actions">
+        <button type="button" data-story-pause aria-label="إيقاف القصة مؤقتاً" aria-pressed="false"><i class="bi bi-pause-fill" aria-hidden="true"></i></button>
+        <button type="button" data-story-close aria-label="إغلاق عارض القصص"><i class="bi bi-x-lg" aria-hidden="true"></i></button>
+      </span>
+    </header>
+    <button class="home-story-viewer__nav home-story-viewer__nav--previous" type="button" data-story-previous aria-label="اللقطة السابقة"><i class="bi bi-chevron-right" aria-hidden="true"></i></button>
+    <button class="home-story-viewer__nav home-story-viewer__nav--next" type="button" data-story-next aria-label="اللقطة التالية"><i class="bi bi-chevron-left" aria-hidden="true"></i></button>
+    <div class="home-story-viewer__content">
+      <p id="story-viewer-caption" data-story-viewer-caption></p>
+      <a class="home-story-viewer__link" href="03-villa-profile.html" data-story-viewer-link>عرض الإقامة <i class="bi bi-arrow-left" aria-hidden="true"></i></a>
+    </div>
+    <p class="visually-hidden" data-story-status role="status" aria-live="polite"></p>
+  </dialog>
+
+  <footer class="site-footer marketplace-footer">
+    <div class="footer-grid page-shell">
+      <div class="footer-intro">
+        <a class="marketplace-footer__brand" href="01-home-discovery.html"><span><i class="bi bi-compass" aria-hidden="true"></i></span><strong>بوابتك لإقامة أجمل</strong></a>
+        <p>اكتشف أماكن مختارة بعناية، وقارن الخيارات بوضوح قبل أن تبدأ طلب الحجز.</p>
+        <div class="footer-social-links" aria-label="شبكات التواصل الاجتماعي"><a href="#" aria-label="إنستغرام"><i class="bi bi-instagram" aria-hidden="true"></i></a><a href="#" aria-label="فيسبوك"><i class="bi bi-facebook" aria-hidden="true"></i></a><a href="#" aria-label="يوتيوب"><i class="bi bi-youtube" aria-hidden="true"></i></a></div>
+      </div>
+      <nav class="footer-column" aria-label="روابط سريعة"><h2>روابط سريعة</h2><a href="01-home-discovery.html">الرئيسية</a><a href="02-search-map-results.html">استكشف الإقامات</a><a href="01-home-discovery.html#seasonal-offers">العروض</a></nav>
+      <nav class="footer-column" aria-label="المساعدة والسياسات"><h2>المساعدة</h2><a href="#">مركز المساعدة</a><a href="#">سياسة الإلغاء</a><a href="#">إمكانية الوصول</a></nav>
+      <div class="footer-column marketplace-footer__contact"><h2>تواصل معنا</h2><a href="mailto:support@example.com"><i class="bi bi-envelope" aria-hidden="true"></i><span dir="ltr">support@example.com</span></a><p><i class="bi bi-clock" aria-hidden="true"></i><span>الدعم متاح يومياً</span></p></div>
+    </div>
+    <div class="footer-bottom page-shell"><p>© <span data-current-year></span> نموذج واجهة الإقامات</p><p>العربية · ر.س.</p></div>
+  </footer>
+
+  <dialog class="modal" id="sign-in-dialog" aria-labelledby="sign-in-title">
+    <div class="modal__content">
+      <div class="modal__header"><div><h2 id="sign-in-title">احفظ اختياراتك</h2><p class="muted">سجّل الدخول لمزامنة المفضلة وإكمال الطلب لاحقاً.</p></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+      <div class="modal__actions"><button class="button button--quiet" type="button" data-dialog-close>ليس الآن</button><a class="button button--primary" href="05-login.html">تسجيل الدخول</a></div>
+    </div>
+  </dialog>
+
+  <script type="module" src="assets/js/pages/home.js"></script>
+</body>
+</html>

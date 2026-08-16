@@ -1,0 +1,894 @@
+- generic [active] [ref=f1e1]:
+  - link "انتقل إلى المحتوى" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - text: 
+      - button "فتح القائمة" [ref=f1e5] [cursor=pointer]:
+        - generic [ref=f1e6]: القائمة
+      - generic [ref=f1e7]:
+        - button "تغيير اللغة" [ref=f1e8] [cursor=pointer]:
+          - generic [ref=f1e9]: 
+          - generic [ref=f1e10]: العربية
+        - button "المفضلة" [ref=f1e11] [cursor=pointer]:
+          - generic [ref=f1e12]: 
+        - button "تسجيل الدخول" [ref=f1e14] [cursor=pointer]:
+          - generic [ref=f1e15]: 
+  - text: 
+  - main [ref=f1e17]:
+    - region [ref=f1e18]:
+      - generic [ref=f1e20]:
+        - heading "مكانك المثالي يبدأ هنا" [level=1] [ref=f1e21]
+        - paragraph [ref=f1e22]: إقامات مميزة في أجمل الوجهات
+    - form "البحث عن إقامة" [ref=f1e23]:
+      - button "إلى أين تريد أن تذهب؟ الدولة، المدينة أو اسم الإقامة" [ref=f1e24] [cursor=pointer]:
+        - generic [ref=f1e25]: 
+        - generic [ref=f1e26]:
+          - strong [ref=f1e27]: إلى أين تريد أن تذهب؟
+          - generic [ref=f1e28]: الدولة، المدينة أو اسم الإقامة
+      - button "متى تريد الحجز؟ التواريخ اختيارية" [ref=f1e29] [cursor=pointer]:
+        - generic [ref=f1e30]: 
+        - generic [ref=f1e31]:
+          - strong [ref=f1e32]: متى تريد الحجز؟
+          - generic [ref=f1e33]: التواريخ اختيارية
+      - button "الضيوف 2 بالغين" [ref=f1e34] [cursor=pointer]:
+        - generic [ref=f1e35]: 
+        - generic [ref=f1e36]:
+          - strong [ref=f1e37]: الضيوف
+          - generic [ref=f1e38]: 2 بالغين
+      - button "ابحث عن إقامة" [ref=f1e39] [cursor=pointer]:
+        - generic [ref=f1e40]: 
+      - text:                  
+    - generic [ref=f1e42]:
+      - region [ref=f1e43]:
+        - generic [ref=f1e44]:
+          - generic [ref=f1e45]:
+            - heading "قصص الإقامات" [level=2] [ref=f1e46]
+            - generic [ref=f1e47]: ممول
+          - link "عرض الكل" [ref=f1e48] [cursor=pointer]:
+            - /url: 02-search-map-results.html?sponsored=true
+        - generic [ref=f1e49]:
+          - text: 
+          - generic "قصص الإقامات الممولة" [ref=f1e50]:
+            - button "عرض قصة فيلا الشرفة في تركيا، محتوى ممول" [ref=f1e51] [cursor=pointer]:
+              - generic [ref=f1e52]:
+                - img "فيلا الشرفة في تركيا" [ref=f1e54]
+                - generic [ref=f1e55]: ممول
+              - generic [ref=f1e56]:
+                - strong [ref=f1e57]: فيلا الشرفة
+                - generic [ref=f1e58]: تركيا
+            - button "عرض قصة بيت الصنوبر في إيطاليا، محتوى ممول" [ref=f1e59] [cursor=pointer]:
+              - generic [ref=f1e60]:
+                - img "بيت الصنوبر في إيطاليا" [ref=f1e62]
+                - generic [ref=f1e63]: ممول
+              - generic [ref=f1e64]:
+                - strong [ref=f1e65]: بيت الصنوبر
+                - generic [ref=f1e66]: إيطاليا
+            - button "عرض قصة دار الزيتون في لبنان، محتوى ممول" [ref=f1e67] [cursor=pointer]:
+              - generic [ref=f1e68]:
+                - img "دار الزيتون في لبنان" [ref=f1e70]
+                - generic [ref=f1e71]: ممول
+              - generic [ref=f1e72]:
+                - strong [ref=f1e73]: دار الزيتون
+                - generic [ref=f1e74]: لبنان
+            - button "عرض قصة لؤلؤة البحر في اليونان، محتوى ممول" [ref=f1e75] [cursor=pointer]:
+              - generic [ref=f1e76]:
+                - img "لؤلؤة البحر في اليونان" [ref=f1e78]
+                - generic [ref=f1e79]: ممول
+              - generic [ref=f1e80]:
+                - strong [ref=f1e81]: لؤلؤة البحر
+                - generic [ref=f1e82]: اليونان
+            - button "عرض قصة دار السوسن في المغرب، محتوى ممول" [ref=f1e83] [cursor=pointer]:
+              - generic [ref=f1e84]:
+                - img "دار السوسن في المغرب" [ref=f1e86]
+                - generic [ref=f1e87]: ممول
+              - generic [ref=f1e88]:
+                - strong [ref=f1e89]: دار السوسن
+                - generic [ref=f1e90]: المغرب
+            - button "عرض قصة مروج الجبل في عُمان، محتوى ممول" [ref=f1e91] [cursor=pointer]:
+              - generic [ref=f1e92]:
+                - img "مروج الجبل في عُمان" [ref=f1e94]
+                - generic [ref=f1e95]: ممول
+              - generic [ref=f1e96]:
+                - strong [ref=f1e97]: مروج الجبل
+                - generic [ref=f1e98]: عُمان
+            - button "عرض قصة دار النخيل في الإمارات، محتوى ممول" [ref=f1e99] [cursor=pointer]:
+              - generic [ref=f1e100]:
+                - img "دار النخيل في الإمارات" [ref=f1e102]
+                - generic [ref=f1e103]: ممول
+              - generic [ref=f1e104]:
+                - strong [ref=f1e105]: دار النخيل
+                - generic [ref=f1e106]: الإمارات
+          - text: 
+      - region [ref=f1e107]:
+        - generic [ref=f1e108]:
+          - heading "استكشف الوجهات" [level=2] [ref=f1e110]
+          - link "عرض الكل" [ref=f1e111] [cursor=pointer]:
+            - /url: 02-search-map-results.html
+        - generic [ref=f1e112]:
+          - link "ساحل العقبة وإقامة مطلة على البحر وجهة مميزة العقبة ساحل هادئ وإقامات قريبة من البحر." [ref=f1e113] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=العقبة
+            - img "ساحل العقبة وإقامة مطلة على البحر" [ref=f1e115]
+            - generic [ref=f1e116]:
+              - generic [ref=f1e117]: وجهة مميزة
+              - strong [ref=f1e118]: العقبة
+              - generic [ref=f1e119]: ساحل هادئ وإقامات قريبة من البحر.
+          - link "الساحل الطبيعي في أنطاليا أنطاليا شواطئ وطبيعة لإقامة صيفية هادئة." [ref=f1e120] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=أنطاليا
+            - img "الساحل الطبيعي في أنطاليا" [ref=f1e122]
+            - generic [ref=f1e123]:
+              - strong [ref=f1e124]: أنطاليا
+              - generic [ref=f1e125]: شواطئ وطبيعة لإقامة صيفية هادئة.
+          - link "أفق دبي الحديث دبي إقامات عصرية قريبة من المدينة." [ref=f1e126] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=دبي
+            - img "أفق دبي الحديث" [ref=f1e128]
+            - generic [ref=f1e129]:
+              - strong [ref=f1e130]: دبي
+              - generic [ref=f1e131]: إقامات عصرية قريبة من المدينة.
+          - link "الطبيعة الخضراء في عجلون عجلون طبيعة خضراء وأجواء عائلية." [ref=f1e132] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=عجلون
+            - img "الطبيعة الخضراء في عجلون" [ref=f1e134]
+            - generic [ref=f1e135]:
+              - strong [ref=f1e136]: عجلون
+              - generic [ref=f1e137]: طبيعة خضراء وأجواء عائلية.
+          - link "مدينة إسطنبول ومضيق البوسفور إسطنبول مدينة نابضة وإقامات بإطلالات متنوعة." [ref=f1e138] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=إسطنبول
+            - img "مدينة إسطنبول ومضيق البوسفور" [ref=f1e140]
+            - generic [ref=f1e141]:
+              - strong [ref=f1e142]: إسطنبول
+              - generic [ref=f1e143]: مدينة نابضة وإقامات بإطلالات متنوعة.
+          - link "إقامة بين الطبيعة في صلالة صلالة خضرة موسمية ومساحات للاسترخاء." [ref=f1e144] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=صلالة
+            - img "إقامة بين الطبيعة في صلالة" [ref=f1e146]
+            - generic [ref=f1e147]:
+              - strong [ref=f1e148]: صلالة
+              - generic [ref=f1e149]: خضرة موسمية ومساحات للاسترخاء.
+      - region [ref=f1e150]:
+        - heading "عروض الموسم" [level=2] [ref=f1e153]
+        - generic [ref=f1e154]:
+          - article [ref=f1e155]:
+            - img "فيلا صيفية مطلة على البحر" [ref=f1e157]
+            - generic [ref=f1e158]:
+              - generic [ref=f1e159]: عرض موسمي
+              - heading "استمتع بالصيف" [level=3] [ref=f1e160]
+              - paragraph [ref=f1e161]: خصم يصل إلى 25%
+              - link "اكتشف العرض" [ref=f1e162] [cursor=pointer]:
+                - /url: 02-search-map-results.html?offer=summer
+          - article [ref=f1e163]:
+            - img "إقامة هادئة بين أشجار الزيتون" [ref=f1e165]
+            - generic [ref=f1e166]:
+              - generic [ref=f1e167]: نهاية الأسبوع
+              - heading "لحظات تبقى" [level=3] [ref=f1e168]
+              - paragraph [ref=f1e169]: إقامات مختارة لأيام هادئة
+              - link "استكشف الآن" [ref=f1e170] [cursor=pointer]:
+                - /url: 02-search-map-results.html?offer=weekend
+      - region [ref=f1e171]:
+        - generic [ref=f1e172]:
+          - generic [ref=f1e173]:
+            - heading "الأكثر رواجاً" [level=2] [ref=f1e174]
+            - generic [ref=f1e175]: عضوي
+          - link "عرض الكل" [ref=f1e176] [cursor=pointer]:
+            - /url: 02-search-map-results.html
+        - generic [ref=f1e177]:
+          - text: 
+          - generic [ref=f1e178]:
+            - article [ref=f1e179]:
+              - link "فيلا جاردن في دبي فيلا جاردن دبي، الإمارات" [ref=f1e180] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا جاردن في دبي" [ref=f1e182]
+                - generic [ref=f1e183]:
+                  - strong [ref=f1e184]: فيلا جاردن
+                  - generic [ref=f1e185]: دبي، الإمارات
+              - button "حفظ فيلا جاردن" [ref=f1e186] [cursor=pointer]:
+                - generic [ref=f1e187]: 
+              - generic [ref=f1e188]:
+                - generic [ref=f1e189]:
+                  - generic [ref=f1e190]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e191]:
+                  - generic [ref=f1e192]: 
+                  - text: 4 غرف
+                - generic [ref=f1e193]:
+                  - generic [ref=f1e194]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e195]:
+                - generic [ref=f1e196]:
+                  - generic [ref=f1e197]: 
+                  - text: "4.9"
+                - generic [ref=f1e198]:
+                  - generic [ref=f1e199]: ابتداءً من
+                  - strong [ref=f1e200]: 1,280 ر.س.
+            - article [ref=f1e201]:
+              - link "فيلا نور في صلالة فيلا نور صلالة، عُمان" [ref=f1e202] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا نور في صلالة" [ref=f1e204]
+                - generic [ref=f1e205]:
+                  - strong [ref=f1e206]: فيلا نور
+                  - generic [ref=f1e207]: صلالة، عُمان
+              - button "حفظ فيلا نور" [ref=f1e208] [cursor=pointer]:
+                - generic [ref=f1e209]: 
+              - generic [ref=f1e210]:
+                - generic [ref=f1e211]:
+                  - generic [ref=f1e212]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e213]:
+                  - generic [ref=f1e214]: 
+                  - text: 3 غرف
+                - generic [ref=f1e215]:
+                  - generic [ref=f1e216]: 
+                  - text: إطلالة بحرية
+              - generic [ref=f1e217]:
+                - generic [ref=f1e218]:
+                  - generic [ref=f1e219]: 
+                  - text: "4.8"
+                - generic [ref=f1e220]:
+                  - generic [ref=f1e221]: ابتداءً من
+                  - strong [ref=f1e222]: 890 ر.س.
+            - article [ref=f1e223]:
+              - link "فيلا ستيل في بالي فيلا ستيل بالي، إندونيسيا" [ref=f1e224] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا ستيل في بالي" [ref=f1e226]
+                - generic [ref=f1e227]:
+                  - strong [ref=f1e228]: فيلا ستيل
+                  - generic [ref=f1e229]: بالي، إندونيسيا
+              - button "حفظ فيلا ستيل" [ref=f1e230] [cursor=pointer]:
+                - generic [ref=f1e231]: 
+              - generic [ref=f1e232]:
+                - generic [ref=f1e233]:
+                  - generic [ref=f1e234]: 
+                  - text: حتى 10 ضيوف
+                - generic [ref=f1e235]:
+                  - generic [ref=f1e236]: 
+                  - text: 5 غرف
+                - generic [ref=f1e237]:
+                  - generic [ref=f1e238]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e239]:
+                - generic [ref=f1e240]:
+                  - generic [ref=f1e241]: 
+                  - text: "4.9"
+                - generic [ref=f1e242]:
+                  - generic [ref=f1e243]: ابتداءً من
+                  - strong [ref=f1e244]: 2,320 ر.س.
+            - article [ref=f1e245]:
+              - link "دار السرو في إسطنبول دار السرو إسطنبول، تركيا" [ref=f1e246] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار السرو في إسطنبول" [ref=f1e248]
+                - generic [ref=f1e249]:
+                  - strong [ref=f1e250]: دار السرو
+                  - generic [ref=f1e251]: إسطنبول، تركيا
+              - button "حفظ دار السرو" [ref=f1e252] [cursor=pointer]:
+                - generic [ref=f1e253]: 
+              - generic [ref=f1e254]:
+                - generic [ref=f1e255]:
+                  - generic [ref=f1e256]: 
+                  - text: حتى 4 ضيوف
+                - generic [ref=f1e257]:
+                  - generic [ref=f1e258]: 
+                  - text: غرفتان
+                - generic [ref=f1e259]:
+                  - generic [ref=f1e260]: 
+                  - text: حديقة خاصة
+              - generic [ref=f1e261]:
+                - generic [ref=f1e262]:
+                  - generic [ref=f1e263]: 
+                  - text: "4.7"
+                - generic [ref=f1e264]:
+                  - generic [ref=f1e265]: ابتداءً من
+                  - strong [ref=f1e266]: 1,050 ر.س.
+            - article [ref=f1e267]:
+              - link "فيلا أماليا في مسقط فيلا أماليا مسقط، عُمان" [ref=f1e268] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا أماليا في مسقط" [ref=f1e270]
+                - generic [ref=f1e271]:
+                  - strong [ref=f1e272]: فيلا أماليا
+                  - generic [ref=f1e273]: مسقط، عُمان
+              - button "حفظ فيلا أماليا" [ref=f1e274] [cursor=pointer]:
+                - generic [ref=f1e275]: 
+              - generic [ref=f1e276]:
+                - generic [ref=f1e277]:
+                  - generic [ref=f1e278]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e279]:
+                  - generic [ref=f1e280]: 
+                  - text: 4 غرف
+                - generic [ref=f1e281]:
+                  - generic [ref=f1e282]: 
+                  - text: إطلالة بحرية
+              - generic [ref=f1e283]:
+                - generic [ref=f1e284]:
+                  - generic [ref=f1e285]: 
+                  - text: "4.8"
+                - generic [ref=f1e286]:
+                  - generic [ref=f1e287]: ابتداءً من
+                  - strong [ref=f1e288]: 1,460 ر.س.
+            - article [ref=f1e289]:
+              - link "بيت الشرفة في العقبة بيت الشرفة العقبة، الأردن" [ref=f1e290] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت الشرفة في العقبة" [ref=f1e292]
+                - generic [ref=f1e293]:
+                  - strong [ref=f1e294]: بيت الشرفة
+                  - generic [ref=f1e295]: العقبة، الأردن
+              - button "حفظ بيت الشرفة" [ref=f1e296] [cursor=pointer]:
+                - generic [ref=f1e297]: 
+              - generic [ref=f1e298]:
+                - generic [ref=f1e299]:
+                  - generic [ref=f1e300]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e301]:
+                  - generic [ref=f1e302]: 
+                  - text: 3 غرف
+                - generic [ref=f1e303]:
+                  - generic [ref=f1e304]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e305]:
+                - generic [ref=f1e306]:
+                  - generic [ref=f1e307]: 
+                  - text: "4.6"
+                - generic [ref=f1e308]:
+                  - generic [ref=f1e309]: ابتداءً من
+                  - strong [ref=f1e310]: 980 ر.س.
+          - text: 
+      - region [ref=f1e311]:
+        - generic:
+          - generic [ref=f1e312]:
+            - heading "فلل في العقبة" [level=2] [ref=f1e313]
+            - generic [ref=f1e314]: عضوي
+          - link "عرض الكل" [ref=f1e315] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=العقبة
+        - generic [ref=f1e316]:
+          - text: 
+          - generic [ref=f1e317]:
+            - article [ref=f1e318]:
+              - link "فيلا المرجان في العقبة فيلا المرجان العقبة، الأردن" [ref=f1e319] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا المرجان في العقبة" [ref=f1e321]
+                - generic [ref=f1e322]:
+                  - strong [ref=f1e323]: فيلا المرجان
+                  - generic [ref=f1e324]: العقبة، الأردن
+              - button "حفظ فيلا المرجان" [ref=f1e325] [cursor=pointer]:
+                - generic [ref=f1e326]: 
+              - generic [ref=f1e327]:
+                - generic [ref=f1e328]:
+                  - generic [ref=f1e329]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e330]:
+                  - generic [ref=f1e331]: 
+                  - text: 4 غرف
+                - generic [ref=f1e332]:
+                  - generic [ref=f1e333]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e334]:
+                - generic [ref=f1e335]:
+                  - generic [ref=f1e336]: 
+                  - text: "4.9"
+                - generic [ref=f1e337]:
+                  - generic [ref=f1e338]: ابتداءً من
+                  - strong [ref=f1e339]: 1,240 ر.س.
+            - article [ref=f1e340]:
+              - link "دار المرتفعات في العقبة دار المرتفعات العقبة، الأردن" [ref=f1e341] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار المرتفعات في العقبة" [ref=f1e343]
+                - generic [ref=f1e344]:
+                  - strong [ref=f1e345]: دار المرتفعات
+                  - generic [ref=f1e346]: العقبة، الأردن
+              - button "حفظ دار المرتفعات" [ref=f1e347] [cursor=pointer]:
+                - generic [ref=f1e348]: 
+              - generic [ref=f1e349]:
+                - generic [ref=f1e350]:
+                  - generic [ref=f1e351]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e352]:
+                  - generic [ref=f1e353]: 
+                  - text: 3 غرف
+                - generic [ref=f1e354]:
+                  - generic [ref=f1e355]: 
+                  - text: إطلالة بحرية
+              - generic [ref=f1e356]:
+                - generic [ref=f1e357]:
+                  - generic [ref=f1e358]: 
+                  - text: "4.8"
+                - generic [ref=f1e359]:
+                  - generic [ref=f1e360]: ابتداءً من
+                  - strong [ref=f1e361]: 1,080 ر.س.
+            - article [ref=f1e362]:
+              - link "بيت الفناء في العقبة بيت الفناء العقبة، الأردن" [ref=f1e363] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت الفناء في العقبة" [ref=f1e365]
+                - generic [ref=f1e366]:
+                  - strong [ref=f1e367]: بيت الفناء
+                  - generic [ref=f1e368]: العقبة، الأردن
+              - button "حفظ بيت الفناء" [ref=f1e369] [cursor=pointer]:
+                - generic [ref=f1e370]: 
+              - generic [ref=f1e371]:
+                - generic [ref=f1e372]:
+                  - generic [ref=f1e373]: 
+                  - text: حتى 4 ضيوف
+                - generic [ref=f1e374]:
+                  - generic [ref=f1e375]: 
+                  - text: غرفتان
+                - generic [ref=f1e376]:
+                  - generic [ref=f1e377]: 
+                  - text: قرب الشاطئ
+              - generic [ref=f1e378]:
+                - generic [ref=f1e379]:
+                  - generic [ref=f1e380]: 
+                  - text: "4.7"
+                - generic [ref=f1e381]:
+                  - generic [ref=f1e382]: ابتداءً من
+                  - strong [ref=f1e383]: 780 ر.س.
+            - article [ref=f1e384]:
+              - link "فيلا المرسى في العقبة فيلا المرسى العقبة، الأردن" [ref=f1e385] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا المرسى في العقبة" [ref=f1e387]
+                - generic [ref=f1e388]:
+                  - strong [ref=f1e389]: فيلا المرسى
+                  - generic [ref=f1e390]: العقبة، الأردن
+              - button "حفظ فيلا المرسى" [ref=f1e391] [cursor=pointer]:
+                - generic [ref=f1e392]: 
+              - generic [ref=f1e393]:
+                - generic [ref=f1e394]:
+                  - generic [ref=f1e395]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e396]:
+                  - generic [ref=f1e397]: 
+                  - text: 4 غرف
+                - generic [ref=f1e398]:
+                  - generic [ref=f1e399]: 
+                  - text: إطلالة المرسى
+              - generic [ref=f1e400]:
+                - generic [ref=f1e401]:
+                  - generic [ref=f1e402]: 
+                  - text: "4.9"
+                - generic [ref=f1e403]:
+                  - generic [ref=f1e404]: ابتداءً من
+                  - strong [ref=f1e405]: 1,460 ر.س.
+            - article [ref=f1e406]:
+              - link "دار النخيل في العقبة دار النخيل العقبة، الأردن" [ref=f1e407] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار النخيل في العقبة" [ref=f1e409]
+                - generic [ref=f1e410]:
+                  - strong [ref=f1e411]: دار النخيل
+                  - generic [ref=f1e412]: العقبة، الأردن
+              - button "حفظ دار النخيل" [ref=f1e413] [cursor=pointer]:
+                - generic [ref=f1e414]: 
+              - generic [ref=f1e415]:
+                - generic [ref=f1e416]:
+                  - generic [ref=f1e417]: 
+                  - text: حتى 10 ضيوف
+                - generic [ref=f1e418]:
+                  - generic [ref=f1e419]: 
+                  - text: 5 غرف
+                - generic [ref=f1e420]:
+                  - generic [ref=f1e421]: 
+                  - text: حديقة خاصة
+              - generic [ref=f1e422]:
+                - generic [ref=f1e423]:
+                  - generic [ref=f1e424]: 
+                  - text: "4.8"
+                - generic [ref=f1e425]:
+                  - generic [ref=f1e426]: ابتداءً من
+                  - strong [ref=f1e427]: 1,590 ر.س.
+            - article [ref=f1e428]:
+              - link "بيت الغروب في العقبة بيت الغروب العقبة، الأردن" [ref=f1e429] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت الغروب في العقبة" [ref=f1e431]
+                - generic [ref=f1e432]:
+                  - strong [ref=f1e433]: بيت الغروب
+                  - generic [ref=f1e434]: العقبة، الأردن
+              - button "حفظ بيت الغروب" [ref=f1e435] [cursor=pointer]:
+                - generic [ref=f1e436]: 
+              - generic [ref=f1e437]:
+                - generic [ref=f1e438]:
+                  - generic [ref=f1e439]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e440]:
+                  - generic [ref=f1e441]: 
+                  - text: 3 غرف
+                - generic [ref=f1e442]:
+                  - generic [ref=f1e443]: 
+                  - text: إطلالة بحرية
+              - generic [ref=f1e444]:
+                - generic [ref=f1e445]:
+                  - generic [ref=f1e446]: 
+                  - text: "4.7"
+                - generic [ref=f1e447]:
+                  - generic [ref=f1e448]: ابتداءً من
+                  - strong [ref=f1e449]: 920 ر.س.
+          - text: 
+      - region [ref=f1e450]:
+        - generic:
+          - generic [ref=f1e451]:
+            - heading "فلل في دبي" [level=2] [ref=f1e452]
+            - generic [ref=f1e453]: عضوي
+          - link "عرض الكل" [ref=f1e454] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=دبي
+        - generic [ref=f1e455]:
+          - text: 
+          - generic [ref=f1e456]:
+            - article [ref=f1e457]:
+              - link "فيلا الصفا في دبي فيلا الصفا دبي، الإمارات" [ref=f1e458] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا الصفا في دبي" [ref=f1e460]
+                - generic [ref=f1e461]:
+                  - strong [ref=f1e462]: فيلا الصفا
+                  - generic [ref=f1e463]: دبي، الإمارات
+              - button "حفظ فيلا الصفا" [ref=f1e464] [cursor=pointer]:
+                - generic [ref=f1e465]: 
+              - generic [ref=f1e466]:
+                - generic [ref=f1e467]:
+                  - generic [ref=f1e468]: 
+                  - text: حتى 10 ضيوف
+                - generic [ref=f1e469]:
+                  - generic [ref=f1e470]: 
+                  - text: 5 غرف
+                - generic [ref=f1e471]:
+                  - generic [ref=f1e472]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e473]:
+                - generic [ref=f1e474]:
+                  - generic [ref=f1e475]: 
+                  - text: "4.9"
+                - generic [ref=f1e476]:
+                  - generic [ref=f1e477]: ابتداءً من
+                  - strong [ref=f1e478]: 2,450 ر.س.
+            - article [ref=f1e479]:
+              - link "دار الزيتون في دبي دار الزيتون دبي، الإمارات" [ref=f1e480] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار الزيتون في دبي" [ref=f1e482]
+                - generic [ref=f1e483]:
+                  - strong [ref=f1e484]: دار الزيتون
+                  - generic [ref=f1e485]: دبي، الإمارات
+              - button "حفظ دار الزيتون" [ref=f1e486] [cursor=pointer]:
+                - generic [ref=f1e487]: 
+              - generic [ref=f1e488]:
+                - generic [ref=f1e489]:
+                  - generic [ref=f1e490]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e491]:
+                  - generic [ref=f1e492]: 
+                  - text: 4 غرف
+                - generic [ref=f1e493]:
+                  - generic [ref=f1e494]: 
+                  - text: فناء خاص
+              - generic [ref=f1e495]:
+                - generic [ref=f1e496]:
+                  - generic [ref=f1e497]: 
+                  - text: "4.8"
+                - generic [ref=f1e498]:
+                  - generic [ref=f1e499]: ابتداءً من
+                  - strong [ref=f1e500]: 1,980 ر.س.
+            - article [ref=f1e501]:
+              - link "بيت المارينا في دبي بيت المارينا دبي، الإمارات" [ref=f1e502] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت المارينا في دبي" [ref=f1e504]
+                - generic [ref=f1e505]:
+                  - strong [ref=f1e506]: بيت المارينا
+                  - generic [ref=f1e507]: دبي، الإمارات
+              - button "حفظ بيت المارينا" [ref=f1e508] [cursor=pointer]:
+                - generic [ref=f1e509]: 
+              - generic [ref=f1e510]:
+                - generic [ref=f1e511]:
+                  - generic [ref=f1e512]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e513]:
+                  - generic [ref=f1e514]: 
+                  - text: 3 غرف
+                - generic [ref=f1e515]:
+                  - generic [ref=f1e516]: 
+                  - text: واجهة مائية
+              - generic [ref=f1e517]:
+                - generic [ref=f1e518]:
+                  - generic [ref=f1e519]: 
+                  - text: "4.9"
+                - generic [ref=f1e520]:
+                  - generic [ref=f1e521]: ابتداءً من
+                  - strong [ref=f1e522]: 2,780 ر.س.
+            - article [ref=f1e523]:
+              - link "فيلا الحديقة في دبي فيلا الحديقة دبي، الإمارات" [ref=f1e524] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا الحديقة في دبي" [ref=f1e526]
+                - generic [ref=f1e527]:
+                  - strong [ref=f1e528]: فيلا الحديقة
+                  - generic [ref=f1e529]: دبي، الإمارات
+              - button "حفظ فيلا الحديقة" [ref=f1e530] [cursor=pointer]:
+                - generic [ref=f1e531]: 
+              - generic [ref=f1e532]:
+                - generic [ref=f1e533]:
+                  - generic [ref=f1e534]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e535]:
+                  - generic [ref=f1e536]: 
+                  - text: 4 غرف
+                - generic [ref=f1e537]:
+                  - generic [ref=f1e538]: 
+                  - text: حديقة خاصة
+              - generic [ref=f1e539]:
+                - generic [ref=f1e540]:
+                  - generic [ref=f1e541]: 
+                  - text: "4.7"
+                - generic [ref=f1e542]:
+                  - generic [ref=f1e543]: ابتداءً من
+                  - strong [ref=f1e544]: 1,740 ر.س.
+            - article [ref=f1e545]:
+              - link "دار الأفق في دبي دار الأفق دبي، الإمارات" [ref=f1e546] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار الأفق في دبي" [ref=f1e548]
+                - generic [ref=f1e549]:
+                  - strong [ref=f1e550]: دار الأفق
+                  - generic [ref=f1e551]: دبي، الإمارات
+              - button "حفظ دار الأفق" [ref=f1e552] [cursor=pointer]:
+                - generic [ref=f1e553]: 
+              - generic [ref=f1e554]:
+                - generic [ref=f1e555]:
+                  - generic [ref=f1e556]: 
+                  - text: حتى 12 ضيفاً
+                - generic [ref=f1e557]:
+                  - generic [ref=f1e558]: 
+                  - text: 6 غرف
+                - generic [ref=f1e559]:
+                  - generic [ref=f1e560]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e561]:
+                - generic [ref=f1e562]:
+                  - generic [ref=f1e563]: 
+                  - text: "4.9"
+                - generic [ref=f1e564]:
+                  - generic [ref=f1e565]: ابتداءً من
+                  - strong [ref=f1e566]: 3,120 ر.س.
+            - article [ref=f1e567]:
+              - link "فيلا السكينة في دبي فيلا السكينة دبي، الإمارات" [ref=f1e568] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا السكينة في دبي" [ref=f1e570]
+                - generic [ref=f1e571]:
+                  - strong [ref=f1e572]: فيلا السكينة
+                  - generic [ref=f1e573]: دبي، الإمارات
+              - button "حفظ فيلا السكينة" [ref=f1e574] [cursor=pointer]:
+                - generic [ref=f1e575]: 
+              - generic [ref=f1e576]:
+                - generic [ref=f1e577]:
+                  - generic [ref=f1e578]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e579]:
+                  - generic [ref=f1e580]: 
+                  - text: 3 غرف
+                - generic [ref=f1e581]:
+                  - generic [ref=f1e582]: 
+                  - text: حديقة هادئة
+              - generic [ref=f1e583]:
+                - generic [ref=f1e584]:
+                  - generic [ref=f1e585]: 
+                  - text: "4.8"
+                - generic [ref=f1e586]:
+                  - generic [ref=f1e587]: ابتداءً من
+                  - strong [ref=f1e588]: 1,560 ر.س.
+          - text: 
+      - region [ref=f1e589]:
+        - generic:
+          - generic [ref=f1e590]:
+            - heading "فلل في إسطنبول" [level=2] [ref=f1e591]
+            - generic [ref=f1e592]: عضوي
+          - link "عرض الكل" [ref=f1e593] [cursor=pointer]:
+            - /url: 02-search-map-results.html?destination=إسطنبول
+        - generic [ref=f1e594]:
+          - text: 
+          - generic [ref=f1e595]:
+            - article [ref=f1e596]:
+              - link "دار البوسفور في إسطنبول دار البوسفور إسطنبول، تركيا" [ref=f1e597] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار البوسفور في إسطنبول" [ref=f1e599]
+                - generic [ref=f1e600]:
+                  - strong [ref=f1e601]: دار البوسفور
+                  - generic [ref=f1e602]: إسطنبول، تركيا
+              - button "حفظ دار البوسفور" [ref=f1e603] [cursor=pointer]:
+                - generic [ref=f1e604]: 
+              - generic [ref=f1e605]:
+                - generic [ref=f1e606]:
+                  - generic [ref=f1e607]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e608]:
+                  - generic [ref=f1e609]: 
+                  - text: 4 غرف
+                - generic [ref=f1e610]:
+                  - generic [ref=f1e611]: 
+                  - text: إطلالة بحرية
+              - generic [ref=f1e612]:
+                - generic [ref=f1e613]:
+                  - generic [ref=f1e614]: 
+                  - text: "4.9"
+                - generic [ref=f1e615]:
+                  - generic [ref=f1e616]: ابتداءً من
+                  - strong [ref=f1e617]: 1,850 ر.س.
+            - article [ref=f1e618]:
+              - link "فيلا الغابة في إسطنبول فيلا الغابة إسطنبول، تركيا" [ref=f1e619] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا الغابة في إسطنبول" [ref=f1e621]
+                - generic [ref=f1e622]:
+                  - strong [ref=f1e623]: فيلا الغابة
+                  - generic [ref=f1e624]: إسطنبول، تركيا
+              - button "حفظ فيلا الغابة" [ref=f1e625] [cursor=pointer]:
+                - generic [ref=f1e626]: 
+              - generic [ref=f1e627]:
+                - generic [ref=f1e628]:
+                  - generic [ref=f1e629]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e630]:
+                  - generic [ref=f1e631]: 
+                  - text: 3 غرف
+                - generic [ref=f1e632]:
+                  - generic [ref=f1e633]: 
+                  - text: حديقة طبيعية
+              - generic [ref=f1e634]:
+                - generic [ref=f1e635]:
+                  - generic [ref=f1e636]: 
+                  - text: "4.8"
+                - generic [ref=f1e637]:
+                  - generic [ref=f1e638]: ابتداءً من
+                  - strong [ref=f1e639]: 1,320 ر.س.
+            - article [ref=f1e640]:
+              - link "بيت الياسمين في إسطنبول بيت الياسمين إسطنبول، تركيا" [ref=f1e641] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت الياسمين في إسطنبول" [ref=f1e643]
+                - generic [ref=f1e644]:
+                  - strong [ref=f1e645]: بيت الياسمين
+                  - generic [ref=f1e646]: إسطنبول، تركيا
+              - button "حفظ بيت الياسمين" [ref=f1e647] [cursor=pointer]:
+                - generic [ref=f1e648]: 
+              - generic [ref=f1e649]:
+                - generic [ref=f1e650]:
+                  - generic [ref=f1e651]: 
+                  - text: حتى 8 ضيوف
+                - generic [ref=f1e652]:
+                  - generic [ref=f1e653]: 
+                  - text: 4 غرف
+                - generic [ref=f1e654]:
+                  - generic [ref=f1e655]: 
+                  - text: مسبح خاص
+              - generic [ref=f1e656]:
+                - generic [ref=f1e657]:
+                  - generic [ref=f1e658]: 
+                  - text: "4.8"
+                - generic [ref=f1e659]:
+                  - generic [ref=f1e660]: ابتداءً من
+                  - strong [ref=f1e661]: 1,480 ر.س.
+            - article [ref=f1e662]:
+              - link "دار التلال في إسطنبول دار التلال إسطنبول، تركيا" [ref=f1e663] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "دار التلال في إسطنبول" [ref=f1e665]
+                - generic [ref=f1e666]:
+                  - strong [ref=f1e667]: دار التلال
+                  - generic [ref=f1e668]: إسطنبول، تركيا
+              - button "حفظ دار التلال" [ref=f1e669] [cursor=pointer]:
+                - generic [ref=f1e670]: 
+              - generic [ref=f1e671]:
+                - generic [ref=f1e672]:
+                  - generic [ref=f1e673]: 
+                  - text: حتى 10 ضيوف
+                - generic [ref=f1e674]:
+                  - generic [ref=f1e675]: 
+                  - text: 5 غرف
+                - generic [ref=f1e676]:
+                  - generic [ref=f1e677]: 
+                  - text: إطلالة بانورامية
+              - generic [ref=f1e678]:
+                - generic [ref=f1e679]:
+                  - generic [ref=f1e680]: 
+                  - text: "4.9"
+                - generic [ref=f1e681]:
+                  - generic [ref=f1e682]: ابتداءً من
+                  - strong [ref=f1e683]: 2,060 ر.س.
+            - article [ref=f1e684]:
+              - link "فيلا السرو في إسطنبول فيلا السرو إسطنبول، تركيا" [ref=f1e685] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "فيلا السرو في إسطنبول" [ref=f1e687]
+                - generic [ref=f1e688]:
+                  - strong [ref=f1e689]: فيلا السرو
+                  - generic [ref=f1e690]: إسطنبول، تركيا
+              - button "حفظ فيلا السرو" [ref=f1e691] [cursor=pointer]:
+                - generic [ref=f1e692]: 
+              - generic [ref=f1e693]:
+                - generic [ref=f1e694]:
+                  - generic [ref=f1e695]: 
+                  - text: حتى 4 ضيوف
+                - generic [ref=f1e696]:
+                  - generic [ref=f1e697]: 
+                  - text: غرفتان
+                - generic [ref=f1e698]:
+                  - generic [ref=f1e699]: 
+                  - text: حديقة خاصة
+              - generic [ref=f1e700]:
+                - generic [ref=f1e701]:
+                  - generic [ref=f1e702]: 
+                  - text: "4.7"
+                - generic [ref=f1e703]:
+                  - generic [ref=f1e704]: ابتداءً من
+                  - strong [ref=f1e705]: 980 ر.س.
+            - article [ref=f1e706]:
+              - link "بيت الساحل في إسطنبول بيت الساحل إسطنبول، تركيا" [ref=f1e707] [cursor=pointer]:
+                - /url: 03-villa-profile.html
+                - img "بيت الساحل في إسطنبول" [ref=f1e709]
+                - generic [ref=f1e710]:
+                  - strong [ref=f1e711]: بيت الساحل
+                  - generic [ref=f1e712]: إسطنبول، تركيا
+              - button "حفظ بيت الساحل" [ref=f1e713] [cursor=pointer]:
+                - generic [ref=f1e714]: 
+              - generic [ref=f1e715]:
+                - generic [ref=f1e716]:
+                  - generic [ref=f1e717]: 
+                  - text: حتى 6 ضيوف
+                - generic [ref=f1e718]:
+                  - generic [ref=f1e719]: 
+                  - text: 3 غرف
+                - generic [ref=f1e720]:
+                  - generic [ref=f1e721]: 
+                  - text: إطلالة مائية
+              - generic [ref=f1e722]:
+                - generic [ref=f1e723]:
+                  - generic [ref=f1e724]: 
+                  - text: "4.8"
+                - generic [ref=f1e725]:
+                  - generic [ref=f1e726]: ابتداءً من
+                  - strong [ref=f1e727]: 1,420 ر.س.
+          - text: 
+      - text: 
+      - region [ref=f1e728]:
+        - generic [ref=f1e730]:
+          - heading "اختيارات تناسب رحلتك" [level=2] [ref=f1e731]
+          - generic [ref=f1e732]: عضوي
+        - paragraph [ref=f1e733]: فعّل التخصيص لنرتب هذا القسم وفق الوجهات والإقامات التي تستكشفها.
+        - generic [ref=f1e734]:
+          - generic [ref=f1e735]: 
+          - generic [ref=f1e736]:
+            - strong [ref=f1e737]: اقتراحات أذكى، بعد موافقتك
+            - paragraph [ref=f1e738]: يمكن استخدام وجهات البحث والإقامات التي تشاهدها داخل هذا المتصفح فقط، ولن نستخدم هذا النشاط قبل موافقتك.
+          - generic [ref=f1e739]:
+            - button "السماح بالتخصيص" [ref=f1e740] [cursor=pointer]
+            - button "ليس الآن" [ref=f1e741] [cursor=pointer]
+        - text:    
+  - text:     
+  - contentinfo [ref=f1e742]:
+    - generic [ref=f1e743]:
+      - generic [ref=f1e744]:
+        - link [ref=f1e745] [cursor=pointer]:
+          - /url: 01-home-discovery.html
+          - generic [ref=f1e746]: 
+          - strong [ref=f1e748]: بوابتك لإقامة أجمل
+        - paragraph [ref=f1e749]: اكتشف أماكن مختارة بعناية، وقارن الخيارات بوضوح قبل أن تبدأ طلب الحجز.
+        - generic "شبكات التواصل الاجتماعي" [ref=f1e750]:
+          - link "إنستغرام" [ref=f1e751] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e752]: 
+          - link "فيسبوك" [ref=f1e753] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e754]: 
+          - link "يوتيوب" [ref=f1e755] [cursor=pointer]:
+            - /url: "#"
+            - generic [ref=f1e756]: 
+      - navigation "روابط سريعة" [ref=f1e757]:
+        - heading "روابط سريعة" [level=2] [ref=f1e758]
+        - link "الرئيسية" [ref=f1e759] [cursor=pointer]:
+          - /url: 01-home-discovery.html
+        - link "استكشف الإقامات" [ref=f1e760] [cursor=pointer]:
+          - /url: 02-search-map-results.html
+        - link "العروض" [ref=f1e761] [cursor=pointer]:
+          - /url: "#seasonal-offers"
+      - navigation "المساعدة والسياسات" [ref=f1e762]:
+        - heading "المساعدة" [level=2] [ref=f1e763]
+        - link "مركز المساعدة" [ref=f1e764] [cursor=pointer]:
+          - /url: "#"
+        - link "سياسة الإلغاء" [ref=f1e765] [cursor=pointer]:
+          - /url: "#"
+        - link "إمكانية الوصول" [ref=f1e766] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=f1e767]:
+        - heading "تواصل معنا" [level=2] [ref=f1e768]
+        - link "support@example.com" [ref=f1e769] [cursor=pointer]:
+          - /url: mailto:support@example.com
+          - generic [ref=f1e770]: 
+        - paragraph [ref=f1e772]:
+          - generic [ref=f1e773]: 
+          - generic [ref=f1e774]: الدعم متاح يومياً
+    - generic [ref=f1e775]:
+      - paragraph [ref=f1e776]: © 2026 نموذج واجهة الإقامات
+      - paragraph [ref=f1e777]: العربية · ر.س.
+  - text: 

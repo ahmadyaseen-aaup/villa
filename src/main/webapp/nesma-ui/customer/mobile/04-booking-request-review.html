@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="مراجعة تفاصيل طلب الإقامة والضيوف والسعر التقديري قبل إرساله إلى المضيف.">
+  <title>مراجعة طلب الإقامة</title>
+  <link rel="icon" href="../web/assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="../web/assets/images/hero-villa-640.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../web/assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/pages/booking-review.css?v=3">
+</head>
+<body>
+  <div class="mobile-app mobile-review-page">
+    <a class="mobile-skip-link" href="#review-content">انتقل إلى مراجعة الطلب</a>
+
+    <header class="mobile-topbar mobile-review-topbar" data-review-topbar>
+      <a class="mobile-topbar__back" href="03-villa-profile.html#booking-options" aria-label="العودة إلى خيارات الإقامة"><i class="bi bi-chevron-right" aria-hidden="true"></i></a>
+      <div class="mobile-review-topbar__title"><span>الخطوة 2 من 4</span><h1>مراجعة طلب الإقامة</h1></div>
+      <span class="mobile-topbar__spacer" aria-hidden="true"></span>
+      <div class="mobile-review-progress" role="progressbar" aria-label="تقدم طلب الإقامة" aria-valuemin="1" aria-valuemax="4" aria-valuenow="2"><span></span></div>
+    </header>
+
+    <main class="mobile-review-content mobile-shell" id="review-content">
+      <section class="mobile-review-property review-reveal" aria-labelledby="property-title">
+        <picture>
+          <source srcset="../web/assets/images/hero-villa-640.webp 640w, ../web/assets/images/hero-villa-1280.webp 1280w" sizes="(max-width: 480px) 44vw, 210px" type="image/webp">
+          <img src="../web/assets/images/hero-villa.jpg" width="1536" height="1024" alt="فيلا أماليا ومسبحها" fetchpriority="high" decoding="async">
+        </picture>
+        <div class="mobile-review-property__content">
+          <span class="mobile-review-property__status"><i class="bi bi-clock-history" aria-hidden="true"></i> يتطلب موافقة المضيف</span>
+          <h2 id="property-title">فيلا أماليا</h2>
+          <p><i class="bi bi-geo-alt" aria-hidden="true"></i> جبل عمّان، الأردن</p>
+          <div class="mobile-review-property__meta"><span class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8 <small>(98)</small></span><a href="03-villa-profile.html">عرض الإقامة</a></div>
+        </div>
+      </section>
+
+      <form data-mobile-review-form>
+        <section class="mobile-review-section review-reveal" aria-labelledby="stay-title">
+          <div class="mobile-review-section__heading"><div><p>تفاصيل الرحلة</p><h2 id="stay-title">الإقامة والضيوف</h2></div><a href="03-villa-profile.html#booking-options">تعديل</a></div>
+          <div class="mobile-review-list">
+            <div class="mobile-review-row"><span class="mobile-review-row__icon"><i class="bi bi-moon-stars" aria-hidden="true"></i></span><div><small>فترة الإقامة</small><strong data-review-period>إقامة ليلية</strong></div></div>
+            <div class="mobile-review-row"><span class="mobile-review-row__icon"><i class="bi bi-calendar3" aria-hidden="true"></i></span><div><small>التواريخ</small><strong data-review-dates>اختر التواريخ من صفحة الإقامة</strong><span data-review-duration>—</span></div></div>
+            <div class="mobile-review-row mobile-review-row--guests"><span class="mobile-review-row__icon"><i class="bi bi-people" aria-hidden="true"></i></span><div><small>الضيوف</small><div class="mobile-review-guests" aria-label="تفاصيل الضيوف"><span><b data-review-adults>2</b> بالغون</span><span><b data-review-children>0</b> أطفال</span><span><b data-review-infants>0</b> رُضّع</span></div></div></div>
+          </div>
+        </section>
+
+        <section class="mobile-review-section mobile-review-contact review-reveal" aria-labelledby="contact-title">
+          <div class="mobile-review-section__heading"><div><p>تحديثات هذا الطلب</p><h2 id="contact-title">معلومات التواصل</h2></div><button type="button" data-toggle-contact aria-expanded="false" aria-controls="contact-fields">تعديل</button></div>
+          <div class="mobile-review-contact__summary" data-contact-summary>
+            <span class="mobile-review-contact__avatar" aria-hidden="true"><i class="bi bi-person"></i></span>
+            <div><strong data-contact-name>أحمد البلوشي</strong><p dir="ltr" data-contact-phone>+968 9123 4567</p><p dir="ltr" data-contact-email>ahmed.albalushi@example.com</p></div>
+          </div>
+          <div class="mobile-review-contact__fields" id="contact-fields" data-contact-fields hidden>
+            <label class="mobile-field-group"><span class="mobile-field-label">الاسم الكامل</span><input class="mobile-field" name="fullName" value="أحمد البلوشي" autocomplete="name" required></label>
+            <label class="mobile-field-group"><span class="mobile-field-label">رقم الهاتف</span><input class="mobile-field" type="tel" name="phone" value="+968 9123 4567" autocomplete="tel" inputmode="tel" dir="ltr" required></label>
+            <label class="mobile-field-group"><span class="mobile-field-label">البريد الإلكتروني</span><input class="mobile-field" type="email" name="email" value="ahmed.albalushi@example.com" autocomplete="email" dir="ltr" required></label>
+            <button class="mobile-button mobile-button--quiet mobile-review-contact__save" type="button" data-save-contact><i class="bi bi-check2" aria-hidden="true"></i> حفظ معلومات التواصل</button>
+          </div>
+
+          <details class="mobile-review-request">
+            <summary><span><strong>طلب خاص <small>(اختياري)</small></strong><small data-request-summary>لا يوجد طلب مضاف</small></span><i class="bi bi-chevron-down" aria-hidden="true"></i></summary>
+            <label><span class="visually-hidden">طلب خاص للمضيف</span><textarea class="mobile-field" name="message" maxlength="600" placeholder="مثلاً: وقت الوصول المتوقع أو طلب يحتاج إلى توضيح" aria-describedby="message-help message-count"></textarea></label>
+            <div class="mobile-review-request__help"><small id="message-help">لا تكتب بيانات دفع أو معلومات حساسة.</small><small id="message-count" data-message-count>0 / 600</small></div>
+          </details>
+        </section>
+
+        <section class="mobile-review-section mobile-review-price review-reveal" aria-labelledby="price-title">
+          <div class="mobile-review-section__heading"><div><p>قبل التحقق النهائي</p><h2 id="price-title">ملخص السعر التقديري</h2></div><button class="mobile-review-info-button" type="button" data-dialog-open="price-review-dialog" aria-label="لماذا السعر تقديري؟"><i class="bi bi-info-circle" aria-hidden="true"></i></button></div>
+          <div class="mobile-review-price__lines">
+            <div><span>الإقامة <small data-review-duration>حسب الفترة المحددة</small></span><strong data-review-price>960 د.أ</strong></div>
+            <div><span>الإضافات المختارة</span><strong>لا توجد</strong></div>
+            <div><span>الضرائب المطبقة</span><strong>تُحسب بعد التحقق</strong></div>
+          </div>
+          <div class="mobile-review-price__total"><span><strong>التقدير الحالي</strong><small>قبل الضرائب التي يحددها السوق</small></span><strong data-review-price>960 د.أ</strong></div>
+          <p class="mobile-review-no-fee"><i class="bi bi-check2-circle" aria-hidden="true"></i><span>لا تُضاف رسوم خدمة منفصلة على العميل.</span></p>
+        </section>
+
+        <section class="mobile-review-next review-reveal" aria-labelledby="next-title">
+          <div class="mobile-review-section__heading"><div><p>بعد الإرسال</p><h2 id="next-title">ماذا سيحدث؟</h2></div></div>
+          <ol>
+            <li><span>1</span><div><strong>نتحقق من الطلب</strong><p>تُراجع السعة والتوفر والسعر والسياسات قبل إنشاء الطلب الفعلي.</p></div></li>
+            <li><span>2</span><div><strong>يرد المضيف</strong><p>يمكنه الموافقة أو الرفض، وتظهر مهلة الرد وفق إعدادات الإقامة.</p></div></li>
+            <li><span>3</span><div><strong>تدفع بعد الموافقة</strong><p>لا يُحصّل أي مبلغ في هذه الخطوة.</p></div></li>
+          </ol>
+        </section>
+
+        <section class="mobile-review-guidance review-reveal" aria-labelledby="guidance-title"><span><i class="bi bi-shield-check" aria-hidden="true"></i></span><div><h2 id="guidance-title">إرسال الطلب لا يؤكد الحجز</h2><p>يصبح الحجز مؤكداً فقط بعد الموافقة ونجاح الدفعة المطلوبة.</p></div></section>
+
+        <div class="mobile-review-terms review-reveal">
+          <input id="review-terms" type="checkbox" data-review-terms aria-describedby="terms-error">
+          <div><label for="review-terms">راجعت تفاصيل الرحلة والسعر التقديري.</label><p>وأوافق على <button type="button" data-dialog-open="terms-dialog">الشروط والأحكام</button> و<button type="button" data-dialog-open="cancellation-dialog">سياسة الإلغاء</button>.</p></div>
+        </div>
+        <p class="mobile-form-error" id="terms-error" data-terms-error role="alert" hidden>وافق على الشروط والسياسة للمتابعة.</p>
+
+        <div class="mobile-review-action-spacer" aria-hidden="true"></div>
+        <div class="mobile-review-action">
+          <div><small>التقدير الحالي</small><strong data-review-price>960 د.أ</strong><span>لن يتم الدفع الآن</span></div>
+          <button class="mobile-button mobile-button--primary" type="submit" data-review-submit><span data-submit-label>إرسال الطلب</span><i class="bi bi-arrow-left" aria-hidden="true"></i></button>
+          <p class="visually-hidden" data-review-status aria-live="polite"></p>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <dialog class="mobile-dialog mobile-review-success" id="review-success" aria-labelledby="success-title">
+    <div class="mobile-review-success__icon"><i class="bi bi-check-lg" aria-hidden="true"></i></div>
+    <div class="mobile-dialog__header"><div><p class="mobile-review-dialog__eyebrow">معاينة ناجحة</p><h2 id="success-title">تمت محاكاة إرسال الطلب</h2><p>لم تُرسل بيانات، ولم يُحجز المخزون، ولم يُحصّل أي مبلغ.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div>
+    <div class="mobile-review-success__summary"><i class="bi bi-house-check" aria-hidden="true"></i><span><strong>فيلا أماليا</strong><small data-success-trip>سيظهر ملخص الرحلة هنا بعد الربط بالنظام.</small></span></div>
+    <div class="mobile-dialog__footer"><button class="mobile-button mobile-button--quiet" type="button" data-dialog-close>العودة للمراجعة</button><a class="mobile-button mobile-button--primary" href="01-home-discovery.html">الرئيسية</a></div>
+  </dialog>
+
+  <dialog class="mobile-dialog mobile-review-policy" id="price-review-dialog" aria-labelledby="price-review-title"><div class="mobile-dialog__header"><div><h2 id="price-review-title">لماذا السعر تقديري؟</h2><p>يصبح السعر نهائياً بعد التحقق من التوفر، وقواعد التاريخ والفترة، والإضافات، والضرائب، والعملة، والسياسات.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>فهمت</button></div></dialog>
+
+  <dialog class="mobile-dialog mobile-review-policy" id="terms-dialog" aria-labelledby="terms-title"><div class="mobile-dialog__header"><div><h2 id="terms-title">الشروط والأحكام</h2><p>تُعرض هنا النسخة المعتمدة للسوق والإقامة وتُحفظ مرجعيتها مع الطلب. راجع النسخة الكاملة قبل الموافقة.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>إغلاق</button></div></dialog>
+
+  <dialog class="mobile-dialog mobile-review-policy" id="cancellation-dialog" aria-labelledby="cancellation-title"><div class="mobile-dialog__header"><div><h2 id="cancellation-title">سياسة الإلغاء</h2><p>تُطبّق السياسة المنشورة والمعتمدة لهذه الإقامة. لا تُعرض قيمة خصم أو استرداد نهائية قبل تفعيل سياسة السوق.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--primary" type="button" data-dialog-close>إغلاق</button></div></dialog>
+
+  <script type="module" src="assets/js/pages/booking-review.js?v=4"></script>
+</body>
+</html>

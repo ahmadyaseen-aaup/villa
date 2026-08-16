@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="استكشف الإقامات عبر قائمة وخريطة متزامنتين مع تواريخ اختيارية وفلاتر مرنة لكل أنواع الفترات.">
+  <title>نتائج الإقامات</title>
+  <link rel="icon" href="assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/images/map-background.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages/search-results.css">
+</head>
+<body class="results-page">
+  <a class="skip-link" href="#main-content">انتقل إلى النتائج</a>
+
+  <header class="site-header results-header">
+    <div class="navbar page-shell">
+      <nav class="nav-links" id="main-navigation" data-nav-menu aria-label="التنقل الرئيسي">
+        <a class="nav-link" href="01-home-discovery.html">الرئيسية</a>
+        <a class="nav-link" href="02-search-map-results.html" aria-current="page">استكشف</a>
+        <a class="nav-link" href="01-home-discovery.html#seasonal-offers">عروض هذا الموسم</a>
+        <a class="nav-link" href="04-booking-request-review.html">حجوزاتي</a>
+        <a class="nav-link results-mobile-language" href="#"><i class="bi bi-globe2" aria-hidden="true"></i> العربية</a>
+      </nav>
+
+      <button class="menu-toggle results-menu-toggle" type="button" data-menu-toggle data-menu-open-label="فتح القائمة" data-menu-close-label="إغلاق القائمة" aria-controls="main-navigation" aria-expanded="false" aria-label="فتح القائمة"><span>القائمة</span></button>
+
+      <div class="nav-actions">
+        <button class="icon-action" type="button" aria-label="تغيير اللغة"><i class="bi bi-globe2" aria-hidden="true"></i><span>العربية</span></button>
+        <button class="icon-action" type="button" data-dialog-open="sign-in-dialog" aria-label="المفضلة"><i class="bi bi-heart" aria-hidden="true"></i><span>المفضلة</span></button>
+        <a class="icon-action" href="05-login.html" aria-label="تسجيل الدخول"><i class="bi bi-person" aria-hidden="true"></i><span>تسجيل الدخول</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="results-discovery" aria-label="معايير البحث الحالية">
+      <div class="results-searchbar page-shell" role="search">
+        <button class="results-searchbar__field" type="button" data-dialog-open="search-dialog"><i class="bi bi-geo-alt" aria-hidden="true"></i><span><strong>إلى أين؟</strong><small data-destination-summary>كل الوجهات</small></span></button>
+        <button class="results-searchbar__field" type="button" data-dialog-open="search-dialog"><i class="bi bi-calendar3" aria-hidden="true"></i><span><strong>متى؟</strong><small data-result-date-summary>التواريخ اختيارية</small></span></button>
+        <button class="results-searchbar__field" type="button" data-dialog-open="search-dialog"><i class="bi bi-people" aria-hidden="true"></i><span><strong>من؟</strong><small data-result-guest-summary>2 بالغين</small></span></button>
+        <button class="results-searchbar__mobile" type="button" data-dialog-open="search-dialog"><i class="bi bi-search" aria-hidden="true"></i><span><strong data-destination-summary>كل الوجهات</strong><small data-search-criteria>دون تواريخ · 2 بالغين · كل الفترات</small></span></button>
+        <button class="results-searchbar__submit" type="button" data-quick-search aria-label="تحديث نتائج البحث"><i class="bi bi-search" aria-hidden="true"></i></button>
+      </div>
+    </section>
+
+    <section class="filter-rail" aria-label="خيارات الفترة والتصفية">
+      <div class="filter-rail__content page-shell">
+        <div class="chip-group" data-choice-group aria-label="نوع الفترة">
+          <button class="chip" type="button" data-choice="all" aria-pressed="true">كل الفترات</button>
+          <button class="chip" type="button" data-choice="overnight" aria-pressed="false"><i class="bi bi-moon-stars" aria-hidden="true"></i> مبيت</button>
+          <button class="chip" type="button" data-choice="full-day" aria-pressed="false"><i class="bi bi-sun" aria-hidden="true"></i> يوم كامل</button>
+          <button class="chip" type="button" data-choice="morning" aria-pressed="false">صباحية</button>
+          <button class="chip" type="button" data-choice="evening" aria-pressed="false">مسائية</button>
+        </div>
+        <button class="results-filter-button" type="button" data-dialog-open="filters-dialog" aria-label="عوامل التصفية"><i class="bi bi-sliders" aria-hidden="true"></i><span>عوامل التصفية</span><b data-filter-count hidden>0</b></button>
+      </div>
+    </section>
+
+    <div class="results-toolbar page-shell">
+      <div><p class="results-toolbar__eyebrow"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> نتائج متاحة الآن</p><h1><span data-results-count>24</span> إقامة تناسب رحلتك</h1><p class="results-toolbar__meta">مرتبة حسب الملاءمة · الأسعار المعروضة تبدأ من دون تواريخ</p></div>
+      <div class="view-switcher" aria-label="طريقة العرض"><button type="button" data-results-view="list" aria-pressed="true"><i class="bi bi-list-ul" aria-hidden="true"></i> القائمة</button><button type="button" data-results-view="map" aria-pressed="false"><i class="bi bi-map" aria-hidden="true"></i> الخريطة</button></div>
+    </div>
+
+    <div class="results-layout" data-results-layout data-active-view="list">
+      <section class="results-list" aria-label="قائمة الإقامات العضوية">
+        <article class="result-card reveal" data-result-id="valley-villa">
+          <div class="result-card__media"><a href="03-villa-profile.html" aria-label="عرض فيلا الوادي الخاصة"><picture><source srcset="assets/images/villa-modern-640.webp 640w, assets/images/villa-modern-1280.webp 1280w, assets/images/villa-modern.webp 1536w" sizes="(max-width: 768px) 100vw, 24vw" type="image/webp"><img src="assets/images/villa-modern.jpg" width="1536" height="1024" alt="فيلا الوادي الحديثة مع مسبح" fetchpriority="high" decoding="async"></picture></a><span class="result-card__label">اختيار رائج</span><button class="favorite-button" type="button" data-favorite aria-label="حفظ فيلا الوادي"><i class="bi bi-heart" aria-hidden="true"></i></button></div>
+          <div class="result-card__body"><div class="result-card__heading"><div><p class="result-card__location">العقبة · 8 دقائق من الشاطئ</p><h2><a href="03-villa-profile.html">فيلا الوادي الخاصة</a></h2></div><span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9</span></div><div class="result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 4 غرف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div><div class="result-card__periods" aria-label="الفترات المتاحة"><span>مبيت</span><span>يوم كامل</span><span>صباحية</span></div><div class="result-card__footer"><span class="result-card__price"><small>ابتداءً من</small><strong>1,280 ر.س.</strong></span><a class="result-card__link" href="03-villa-profile.html">عرض التفاصيل <i class="bi bi-arrow-left" aria-hidden="true"></i></a></div></div>
+        </article>
+
+        <article class="result-card reveal" data-result-id="olive-house">
+          <div class="result-card__media"><a href="03-villa-profile.html" aria-label="عرض بيت الزيتون"><picture><source srcset="assets/images/villa-olive-640.webp 640w, assets/images/villa-olive-1280.webp 1280w, assets/images/villa-olive.webp 1536w" sizes="(max-width: 768px) 100vw, 24vw" type="image/webp"><img src="assets/images/villa-olive.jpg" width="1536" height="1024" alt="بيت الزيتون محاط بالأشجار" loading="lazy" decoding="async"></picture></a><button class="favorite-button" type="button" data-favorite aria-label="حفظ بيت الزيتون"><i class="bi bi-heart" aria-hidden="true"></i></button></div>
+          <div class="result-card__body"><div class="result-card__heading"><div><p class="result-card__location">عجلون · إطلالة على الغابة</p><h2><a href="03-villa-profile.html">بيت الزيتون</a></h2></div><span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8</span></div><div class="result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> 3 غرف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div><div class="result-card__periods" aria-label="الفترات المتاحة"><span>مبيت</span><span>يوم كامل</span></div><div class="result-card__footer"><span class="result-card__price"><small>ابتداءً من</small><strong>890 ر.س.</strong></span><a class="result-card__link" href="03-villa-profile.html">عرض التفاصيل <i class="bi bi-arrow-left" aria-hidden="true"></i></a></div></div>
+        </article>
+
+        <aside class="featured-result reveal" aria-labelledby="featured-result-title">
+          <picture><source srcset="assets/images/villa-summer-640.webp 640w, assets/images/villa-summer-1280.webp 1280w, assets/images/villa-summer.webp 1536w" sizes="(max-width: 768px) 100vw, 48vw" type="image/webp"><img src="assets/images/villa-summer.jpg" width="1536" height="1024" alt="فيلا شمس الصيف قرب البحر" loading="lazy" decoding="async"></picture><div class="featured-result__shade" aria-hidden="true"></div><button class="favorite-button" type="button" data-favorite aria-label="حفظ شمس الصيف"><i class="bi bi-heart" aria-hidden="true"></i></button><div class="featured-result__content"><span class="featured-result__sponsor">ممول</span><p>إقامة مميزة في دبي</p><h2 id="featured-result-title">شمس الصيف</h2><div><span><small>ابتداءً من</small><strong>2,320 ر.س.</strong></span><a href="03-villa-profile.html">عرض الإقامة <i class="bi bi-arrow-left" aria-hidden="true"></i></a></div></div>
+        </aside>
+
+        <article class="result-card reveal" data-result-id="cypress-house">
+          <div class="result-card__media"><a href="03-villa-profile.html" aria-label="عرض دار السرو"><picture><source srcset="assets/images/villa-stone-640.webp 640w, assets/images/villa-stone-1280.webp 1280w, assets/images/villa-stone.webp 1536w" sizes="(max-width: 768px) 100vw, 24vw" type="image/webp"><img src="assets/images/villa-stone.jpg" width="1536" height="1024" alt="دار السرو الحجرية" loading="lazy" decoding="async"></picture></a><button class="favorite-button" type="button" data-favorite aria-label="حفظ دار السرو"><i class="bi bi-heart" aria-hidden="true"></i></button></div>
+          <div class="result-card__body"><div class="result-card__heading"><div><p class="result-card__location">إسطنبول · شيلا</p><h2><a href="03-villa-profile.html">دار السرو</a></h2></div><span class="rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7</span></div><div class="result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 5 ضيوف</span><span><i class="bi bi-door-open" aria-hidden="true"></i> غرفتان</span><span><i class="bi bi-tree" aria-hidden="true"></i> طبيعة هادئة</span></div><div class="result-card__periods" aria-label="الفترات المتاحة"><span>مبيت</span><span>مسائية</span></div><div class="result-card__footer"><span class="result-card__price"><small>ابتداءً من</small><strong>1,050 ر.س.</strong></span><a class="result-card__link" href="03-villa-profile.html">عرض التفاصيل <i class="bi bi-arrow-left" aria-hidden="true"></i></a></div></div>
+        </article>
+      </section>
+
+      <section class="map-panel" data-map-panel aria-label="خريطة الإقامات المتاحة">
+        <div class="map-summary"><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><strong>24 إقامة</strong><small>في نطاق الخريطة</small></span></div>
+        <div class="map-controls" aria-label="أدوات الخريطة"><button type="button" data-map-control="zoom-in" aria-label="تكبير الخريطة"><i class="bi bi-plus-lg" aria-hidden="true"></i></button><button type="button" data-map-control="zoom-out" aria-label="تصغير الخريطة"><i class="bi bi-dash-lg" aria-hidden="true"></i></button><button type="button" data-map-control="location" aria-label="عرض موقعي"><i class="bi bi-crosshair" aria-hidden="true"></i></button></div>
+        <a class="map-pin map-pin--one" href="03-villa-profile.html" data-map-result-id="valley-villa" aria-label="فيلا الوادي، ابتداءً من 1280 ريال">1,280</a><a class="map-pin map-pin--two" href="03-villa-profile.html" data-map-result-id="olive-house" aria-label="بيت الزيتون، ابتداءً من 890 ريال">890</a><a class="map-pin map-pin--three" href="03-villa-profile.html" data-map-result-id="cypress-house" aria-label="دار السرو، ابتداءً من 1050 ريال">1,050</a><a class="map-pin map-pin--four" href="03-villa-profile.html" aria-label="فيلا الندى، ابتداءً من 760 ريال">760</a><a class="map-pin map-pin--five" href="03-villa-profile.html" aria-label="بيت المرجان، ابتداءً من 1440 ريال">1,440</a>
+        <p class="map-status" data-map-status aria-live="polite"><i class="bi bi-arrow-repeat" aria-hidden="true"></i> تتحدث النتائج تلقائياً بعد تحريك الخريطة</p>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="modal results-modal" id="search-dialog" aria-labelledby="search-title"><div class="modal__content"><div class="modal__header"><div><p class="results-modal__eyebrow">معايير رحلتك</p><h2 id="search-title">تعديل البحث</h2><p class="muted">التواريخ ونوع الفترة اختياريان.</p></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="stack"><label><span class="field-label">الوجهة</span><span class="field-with-icon"><i class="bi bi-geo-alt" aria-hidden="true"></i><input class="field" value="العقبة" data-destination-input autocomplete="off"></span></label><div class="date-grid"><label><span class="field-label">الوصول (اختياري)</span><input class="field" type="date" data-search-start></label><label><span class="field-label">المغادرة (اختياري)</span><input class="field" type="date" data-search-end></label></div><div class="guest-list" data-guest-picker="results-guests"><div class="guest-row"><span><strong>البالغون</strong><small>الفئة الأساسية</small></span><span class="counter"><button type="button" data-counter-action="decrease" data-guest-type="adults" aria-label="إنقاص عدد البالغين"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="adults">2</output><button type="button" data-counter-action="increase" data-guest-type="adults" aria-label="زيادة عدد البالغين"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" value="2" min="1" max="20" data-guest-count="adults"></span></div><div class="guest-row"><span><strong>الأطفال</strong><small>عدد مستقل</small></span><span class="counter"><button type="button" data-counter-action="decrease" data-guest-type="children" aria-label="إنقاص عدد الأطفال"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="children">0</output><button type="button" data-counter-action="increase" data-guest-type="children" aria-label="زيادة عدد الأطفال"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" value="0" min="0" max="12" data-guest-count="children"></span></div><div class="guest-row"><span><strong>الرُضّع</strong><small>عدد مستقل</small></span><span class="counter"><button type="button" data-counter-action="decrease" data-guest-type="infants" aria-label="إنقاص عدد الرضع"><i class="bi bi-dash" aria-hidden="true"></i></button><output data-guest-output="infants">0</output><button type="button" data-counter-action="increase" data-guest-type="infants" aria-label="زيادة عدد الرضع"><i class="bi bi-plus" aria-hidden="true"></i></button><input type="hidden" value="0" min="0" max="6" data-guest-count="infants"></span></div></div></div><div class="modal__actions"><button class="button button--quiet" type="button" data-dialog-close>إلغاء</button><button class="button button--primary" type="button" data-dialog-close data-quick-search>تحديث النتائج</button></div></div></dialog>
+
+  <dialog class="modal results-modal results-filter-modal" id="filters-dialog" aria-labelledby="filters-title"><div class="modal__content"><div class="modal__header"><div><p class="results-modal__eyebrow">تصفية النتائج</p><h2 id="filters-title">ما الذي يناسبك؟</h2><p class="muted">اختر ما يهمك، ويمكنك تعديل الخيارات لاحقاً.</p></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="filter-grid"><fieldset><legend>النطاق السعري</legend><div class="filter-price"><label><span>الحد الأدنى</span><input class="field" type="number" inputmode="numeric" min="0" placeholder="0"></label><label><span>الحد الأعلى</span><input class="field" type="number" inputmode="numeric" min="0" placeholder="3000"></label></div></fieldset><fieldset><legend>المزايا</legend><label><input type="checkbox"> مسبح خاص</label><label><input type="checkbox"> مناسب للعائلات</label><label><input type="checkbox"> وصول دون درجات</label><label><input type="checkbox"> إلغاء مرن</label></fieldset><fieldset><legend>نوع الإقامة</legend><label><input type="checkbox"> فيلا مستقلة</label><label><input type="checkbox"> منزل ريفي</label><label><input type="checkbox"> إقامة قرب البحر</label></fieldset><fieldset><legend>الثقة والتأكيد</legend><label><input type="checkbox"> تقييم 4.5 فأعلى</label><label><input type="checkbox"> تأكيد فوري فقط</label><label><input type="checkbox"> مضيف موثّق</label></fieldset></div><div class="modal__actions"><button class="button button--quiet" type="button" data-clear-filters>مسح الكل</button><button class="button button--primary" type="button" data-apply-filters>عرض النتائج</button></div></div></dialog>
+
+  <dialog class="modal results-modal" id="sign-in-dialog" aria-labelledby="sign-in-title"><div class="modal__content"><div class="modal__header"><div><p class="results-modal__eyebrow">احفظها لوقت لاحق</p><h2 id="sign-in-title">احفظ اختياراتك</h2><p class="muted">سجّل الدخول لمزامنة المفضلة على أجهزتك.</p></div><button class="modal__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="modal__actions"><button class="button button--quiet" type="button" data-dialog-close>ليس الآن</button><a class="button button--primary" href="05-login.html">تسجيل الدخول</a></div></div></dialog>
+
+  <script type="module" src="assets/js/pages/search-results.js"></script>
+</body>
+</html>

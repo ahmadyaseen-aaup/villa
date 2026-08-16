@@ -217,7 +217,7 @@ The customer profile supports the following:
 - Booking chats.
 - Support conversations and cases.
 - Submitted reviews and review status.
-- Personalization consent and preference controls.
+- Personalization preference controls.
 
 ### Contact-data rule
 
@@ -684,9 +684,9 @@ This is the standard commercial model.
 
 ### Anonymous behavior
 
-- Anonymous browsing behavior may be used only after consent.
-- Consent-based session behavior may be merged into the customer profile after sign-in.
-- Customers must be able to disable personalization and reset relevant preference history.
+- Anonymous browsing behavior may be used for rule-based personalization by default.
+- Enabled personalization session behavior may be merged into the customer profile after sign-in.
+- Customers must be able to disable personalization and reset relevant preference history from their settings.
 - Without sufficient signals, recommendations fall back to broadly popular, currently available, or editorially selected properties for the active country or city.
 
 ---
@@ -1783,4 +1783,3 @@ The business design is successful when the ecosystem can achieve the following o
 - Customers receive verified reviews, personalized discovery, clear booking states, and traceable support.
 - Country expansion does not require redesigning the core business model.
 - Future tourism services can join the same ecosystem without corrupting accommodation inventory or settlement rules.
-
