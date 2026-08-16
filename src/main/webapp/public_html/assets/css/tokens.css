@@ -1,0 +1,71 @@
+:root {
+  color-scheme: light;
+  --color-ink-950: #062f38;
+  --color-ink-900: #0b3d47;
+  --color-ink-800: #164d56;
+  --color-ink-700: #315e65;
+  --color-ink-600: #4b6f74;
+  --color-ink-500: #687f82;
+  --color-accent-700: #9e3024;
+  --color-accent-600: #bd3e2d;
+  --color-accent-500: #c94735;
+  --color-accent-100: #fff0ec;
+  --color-aqua-100: #eaf4f3;
+  --color-aqua-200: #d5e8e5;
+  --color-sand-100: #f8efe2;
+  --color-sand-200: #ead9b8;
+  --color-canvas: #fbfaf7;
+  --color-surface: #ffffff;
+  --color-surface-muted: #f5f7f5;
+  --color-line: #dfe5e2;
+  --color-line-strong: #cad4d1;
+  --color-success: #287a64;
+  --color-warning: #9b6b1f;
+  --color-danger: #ae3128;
+  --color-star: #e69b18;
+
+  --font-family: "Noto Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+  --font-size-xs: .75rem;
+  --font-size-sm: .875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.0625rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: clamp(1.75rem, 3vw, 2.75rem);
+  --font-size-display: clamp(2.2rem, 4.6vw, 4.8rem);
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --radius-sm: .55rem;
+  --radius-md: .85rem;
+  --radius-lg: 1.15rem;
+  --radius-xl: 1.5rem;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 3px 12px rgba(6, 47, 56, .07);
+  --shadow-md: 0 12px 32px rgba(6, 47, 56, .12);
+  --shadow-lg: 0 24px 64px rgba(6, 47, 56, .17);
+
+  --header-height: 5rem;
+  --content-width: 112rem;
+  --content-gutter: clamp(1rem, 4vw, 3.5rem);
+  --transition-fast: 160ms ease;
+  --transition-medium: 280ms ease;
+}
+
+@media (max-width: 47.99rem) {
+  :root {
+    --header-height: 4.125rem;
+    --content-gutter: .875rem;
+  }
+}

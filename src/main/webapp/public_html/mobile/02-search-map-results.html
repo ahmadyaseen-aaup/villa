@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="نتائج إقامات على الخريطة مع مرشحات واضحة وبطاقات قابلة للاستكشاف.">
+  <title>استكشف الإقامات</title>
+  <link rel="icon" href="../web/assets/images/site-icon.svg" type="image/svg+xml">
+  <link rel="preload" href="../web/assets/images/map-background.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700;800&amp;display=swap">
+  <link rel="stylesheet" href="../web/assets/icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/vendor/leaflet/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="assets/css/pages/results.css">
+</head>
+<body>
+  <div class="mobile-app mobile-app--with-nav mobile-results-page">
+    <a class="mobile-skip-link" href="#results-list">انتقل إلى النتائج</a>
+    <main class="mobile-results-map" aria-label="خريطة نتائج الإقامات">
+      <div class="mobile-results-map__fallback" data-map-fallback>
+        <img class="mobile-results-map__image" src="../web/assets/images/map-background.webp" width="1536" height="1024" alt="خريطة عمّان والمناطق المحيطة" fetchpriority="high" decoding="async">
+      </div>
+      <div class="mobile-results-map__canvas" id="interactive-results-map" data-live-map role="region" aria-label="خريطة تفاعلية لنتائج الإقامات"></div>
+      <p class="visually-hidden" data-map-status role="status" aria-live="polite"></p>
+
+      <a class="mobile-results-search" href="01-home-discovery.html" aria-label="تعديل البحث">
+        <i class="bi bi-arrow-right" aria-hidden="true"></i>
+        <span><strong data-results-destination>عمّان</strong><small><i class="bi bi-calendar3" aria-hidden="true"></i> <span data-results-dates>20–22 أغسطس</span></small></span>
+        <span class="mobile-results-search__filter"><i class="bi bi-sliders" aria-hidden="true"></i></span>
+      </a>
+
+      <div class="mobile-results-filters" aria-label="مرشحات النتائج">
+        <button class="is-active" type="button" data-dialog-open="types-sheet">كل الأنواع</button>
+        <button type="button" data-dialog-open="price-sheet">السعر <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+        <button type="button" data-dialog-open="amenities-sheet">المرافق <i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+      </div>
+
+      <button class="mobile-map-marker mobile-map-marker--amalia is-active" type="button" data-marker="amalia" data-lat="31.9594" data-lng="35.9141" aria-label="فيلا أماليا، يبدأ السعر من 480 ديناراً">480 د.أ</button>
+      <button class="mobile-map-marker mobile-map-marker--bushr" type="button" data-marker="bushr" data-lat="31.9904" data-lng="35.8939" aria-label="فيلا بشر، يبدأ السعر من 350 ديناراً">350 د.أ</button>
+      <button class="mobile-map-marker mobile-map-marker--garden" type="button" data-marker="garden" data-lat="32.0392" data-lng="35.7272" aria-label="فيلا الحديقة، يبدأ السعر من 420 ديناراً">420 د.أ</button>
+      <button class="mobile-map-marker mobile-map-marker--hills" type="button" data-marker="hills" data-lat="31.7195" data-lng="35.7935" aria-label="فيلا التلال، يبدأ السعر من 560 ديناراً">560 د.أ</button>
+      <button class="mobile-map-marker mobile-map-marker--olive" type="button" data-marker="olive" data-lat="32.2744" data-lng="35.8916" aria-label="دار الزيتون، يبدأ السعر من 380 ديناراً">380 د.أ</button>
+
+      <button class="mobile-results-location mobile-icon-button" type="button" data-locate aria-label="الانتقال إلى موقعي"><i class="bi bi-crosshair" aria-hidden="true"></i></button>
+
+      <section class="mobile-results-sheet" id="results-list" data-panel-state="results" aria-labelledby="results-title">
+        <div class="mobile-results-sheet__grabber" data-results-resizer role="separator" tabindex="0" aria-label="تغيير ارتفاع قائمة النتائج" aria-orientation="horizontal" aria-valuemin="18" aria-valuemax="70" aria-valuenow="70" aria-valuetext="قائمة النتائج موسعة" aria-controls="results-cards">
+          <span class="mobile-results-sheet__handle" aria-hidden="true"></span>
+        </div>
+        <div class="mobile-results-sheet__heading">
+          <h1 id="results-title"><span data-results-count>124</span> إقامة</h1>
+          <div class="mobile-results-sheet__actions">
+            <div class="mobile-results-view-toggle" role="group" aria-label="طريقة عرض النتائج">
+              <button type="button" data-results-view="list" aria-label="عرض النتائج كقائمة" aria-pressed="true" aria-controls="results-cards"><i class="bi bi-list" aria-hidden="true"></i></button>
+              <button type="button" data-results-view="grid" aria-label="عرض النتائج كشبكة" aria-pressed="false" aria-controls="results-cards"><i class="bi bi-grid" aria-hidden="true"></i></button>
+            </div>
+            <button class="mobile-results-sheet__collapse" type="button" data-collapse-results aria-label="تصغير قائمة النتائج"><i class="bi bi-chevron-down" aria-hidden="true"></i></button>
+          </div>
+        </div>
+        <p class="visually-hidden" data-results-view-status role="status" aria-live="polite"></p>
+        <p class="visually-hidden" data-results-panel-status role="status" aria-live="polite"></p>
+        <div class="mobile-results-list" id="results-cards" data-results-container data-view="list">
+          <article class="mobile-result-card is-active" data-result="amalia">
+            <a class="mobile-result-card__media" href="03-villa-profile.html"><img src="../web/assets/images/hero-villa-640.webp" width="640" height="427" alt="فيلا أماليا" fetchpriority="high" decoding="async"></a>
+            <button class="mobile-result-card__favorite" type="button" data-favorite aria-label="حفظ فيلا أماليا"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <div class="mobile-result-card__body"><h2><a href="03-villa-profile.html">فيلا أماليا</a> <i class="bi bi-patch-check-fill" aria-label="إقامة موثقة"></i></h2><p class="mobile-result-card__location">عمّان، الأردن</p><p class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8 <small>(98)</small></p><div class="mobile-result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-building" aria-hidden="true"></i> فيلا بالكامل</span><span><i class="bi bi-calendar3" aria-hidden="true"></i> إلغاء حسب السياسة</span></div><div class="mobile-result-card__footer"><p><small>ابتداءً من</small><strong>480 د.أ</strong> / ليلة</p><a class="mobile-button mobile-button--primary" href="03-villa-profile.html">التفاصيل</a></div></div>
+          </article>
+          <article class="mobile-result-card" data-result="bushr">
+            <a class="mobile-result-card__media" href="03-villa-profile.html"><img src="../web/assets/images/villa-olive-640.webp" width="640" height="427" alt="فيلا بشر" loading="lazy" decoding="async"></a>
+            <button class="mobile-result-card__favorite" type="button" data-favorite aria-label="حفظ فيلا بشر"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <div class="mobile-result-card__body"><h2><a href="03-villa-profile.html">فيلا بشر</a></h2><p class="mobile-result-card__location">عمّان، الأردن</p><p class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.7 <small>(72)</small></p><div class="mobile-result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 5 ضيوف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div><div class="mobile-result-card__footer"><p><small>ابتداءً من</small><strong>350 د.أ</strong> / ليلة</p><a class="mobile-button mobile-button--primary" href="03-villa-profile.html">التفاصيل</a></div></div>
+          </article>
+          <article class="mobile-result-card" data-result="garden">
+            <a class="mobile-result-card__media" href="03-villa-profile.html"><img src="../web/assets/images/villa-modern-640.webp" width="640" height="427" alt="فيلا الحديقة" loading="lazy" decoding="async"></a>
+            <button class="mobile-result-card__favorite" type="button" data-favorite aria-label="حفظ فيلا الحديقة"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <div class="mobile-result-card__body"><h2><a href="03-villa-profile.html">فيلا الحديقة</a></h2><p class="mobile-result-card__location">السلط، الأردن</p><p class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9 <small>(116)</small></p><div class="mobile-result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 8 ضيوف</span><span><i class="bi bi-tree" aria-hidden="true"></i> حديقة خاصة</span></div><div class="mobile-result-card__footer"><p><small>ابتداءً من</small><strong>420 د.أ</strong> / ليلة</p><a class="mobile-button mobile-button--primary" href="03-villa-profile.html">التفاصيل</a></div></div>
+          </article>
+          <article class="mobile-result-card" data-result="hills">
+            <a class="mobile-result-card__media" href="03-villa-profile.html"><img src="../web/assets/images/villa-stone-640.webp" width="640" height="427" alt="فيلا التلال" loading="lazy" decoding="async"></a>
+            <button class="mobile-result-card__favorite" type="button" data-favorite aria-label="حفظ فيلا التلال"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <div class="mobile-result-card__body"><h2><a href="03-villa-profile.html">فيلا التلال</a> <i class="bi bi-patch-check-fill" aria-label="إقامة موثقة"></i></h2><p class="mobile-result-card__location">مادبا، الأردن</p><p class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.9 <small>(84)</small></p><div class="mobile-result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 10 ضيوف</span><span><i class="bi bi-water" aria-hidden="true"></i> إطلالة مفتوحة</span></div><div class="mobile-result-card__footer"><p><small>ابتداءً من</small><strong>560 د.أ</strong> / ليلة</p><a class="mobile-button mobile-button--primary" href="03-villa-profile.html">التفاصيل</a></div></div>
+          </article>
+          <article class="mobile-result-card" data-result="olive">
+            <a class="mobile-result-card__media" href="03-villa-profile.html"><img src="../web/assets/images/villa-summer-640.webp" width="640" height="427" alt="دار الزيتون" loading="lazy" decoding="async"></a>
+            <button class="mobile-result-card__favorite" type="button" data-favorite aria-label="حفظ دار الزيتون"><i class="bi bi-heart" aria-hidden="true"></i></button>
+            <div class="mobile-result-card__body"><h2><a href="03-villa-profile.html">دار الزيتون</a></h2><p class="mobile-result-card__location">جرش، الأردن</p><p class="mobile-rating"><i class="bi bi-star-fill" aria-hidden="true"></i> 4.8 <small>(91)</small></p><div class="mobile-result-card__facts"><span><i class="bi bi-people" aria-hidden="true"></i> حتى 6 ضيوف</span><span><i class="bi bi-water" aria-hidden="true"></i> مسبح خاص</span></div><div class="mobile-result-card__footer"><p><small>ابتداءً من</small><strong>380 د.أ</strong> / ليلة</p><a class="mobile-button mobile-button--primary" href="03-villa-profile.html">التفاصيل</a></div></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <nav class="mobile-bottom-nav" aria-label="التنقل الرئيسي">
+      <a href="01-home-discovery.html"><i class="bi bi-house-door" aria-hidden="true"></i><span>الرئيسية</span></a>
+      <a href="02-search-map-results.html" aria-current="page"><i class="bi bi-search" aria-hidden="true"></i><span>استكشاف</span></a>
+      <a href="04-booking-request-review.html"><i class="bi bi-calendar3" aria-hidden="true"></i><span>حجوزاتي</span></a>
+      <a href="#"><i class="bi bi-heart" aria-hidden="true"></i><span>المفضلة</span></a>
+      <a href="05-login.html?returnTo=02-search-map-results.html"><i class="bi bi-person" aria-hidden="true"></i><span>حسابي</span></a>
+    </nav>
+  </div>
+
+  <dialog class="mobile-sheet" id="types-sheet" aria-labelledby="types-title"><div class="mobile-sheet__handle" aria-hidden="true"></div><div class="mobile-sheet__header"><h2 id="types-title">أنواع الإقامة</h2><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-sheet__body mobile-choice-list" data-filter-group="type"><button type="button" aria-selected="true" data-filter-value="all"><i class="bi bi-grid" aria-hidden="true"></i><span><strong>كل الأنواع</strong><small>لا نفرض نوع حجز أثناء الاستكشاف</small></span></button><button type="button" aria-selected="false" data-filter-value="villa"><i class="bi bi-house-door" aria-hidden="true"></i><span><strong>فلل كاملة</strong><small>إقامة خاصة بالكامل</small></span></button><button type="button" aria-selected="false" data-filter-value="instant"><i class="bi bi-lightning" aria-hidden="true"></i><span><strong>حجز فوري</strong><small>حيث تسمح إعدادات الإقامة</small></span></button></div><div class="mobile-sheet__footer"><button class="mobile-button mobile-button--primary" type="button" data-apply-filters>تطبيق</button></div></dialog>
+  <dialog class="mobile-sheet" id="price-sheet" aria-labelledby="price-title"><div class="mobile-sheet__handle" aria-hidden="true"></div><div class="mobile-sheet__header"><h2 id="price-title">نطاق السعر</h2><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-sheet__body mobile-results-price"><label class="mobile-field-group"><span class="mobile-field-label">الحد الأدنى</span><input class="mobile-field" type="number" min="0" inputmode="numeric" placeholder="0"></label><label class="mobile-field-group"><span class="mobile-field-label">الحد الأعلى</span><input class="mobile-field" type="number" min="0" inputmode="numeric" placeholder="1000"></label></div><div class="mobile-sheet__footer"><button class="mobile-button mobile-button--primary" type="button" data-apply-filters>تطبيق</button></div></dialog>
+  <dialog class="mobile-sheet" id="amenities-sheet" aria-labelledby="amenities-title"><div class="mobile-sheet__handle" aria-hidden="true"></div><div class="mobile-sheet__header"><h2 id="amenities-title">المرافق</h2><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-sheet__body mobile-results-checks"><label><input type="checkbox"> مسبح خاص</label><label><input type="checkbox"> إطلالة بحرية</label><label><input type="checkbox"> واي فاي</label><label><input type="checkbox"> موقف خاص</label></div><div class="mobile-sheet__footer"><button class="mobile-button mobile-button--primary" type="button" data-apply-filters>تطبيق</button></div></dialog>
+  <dialog class="mobile-dialog" id="sign-in-dialog" aria-labelledby="sign-in-title"><div class="mobile-dialog__header"><div><h2 id="sign-in-title">احفظ اختياراتك</h2><p>سجّل الدخول لمزامنة المفضلة وإكمال الطلب لاحقاً.</p></div><button class="mobile-dialog__close" type="button" data-dialog-close aria-label="إغلاق"><i class="bi bi-x-lg" aria-hidden="true"></i></button></div><div class="mobile-dialog__footer"><button class="mobile-button mobile-button--quiet" type="button" data-dialog-close>ليس الآن</button><a class="mobile-button mobile-button--primary" href="05-login.html?reason=favorites&amp;returnTo=02-search-map-results.html">تسجيل الدخول</a></div></dialog>
+
+  <script type="module" src="assets/js/pages/results.js"></script>
+</body>
+</html>
